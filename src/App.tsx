@@ -1,11 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from "./pages/home/Home.component";
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hi, My name is Imran Shaikh</h1> 
+    <div className="flex justify-center items-center min-h-screen bg-black-dark">
+      <div className="bg-black-base flex-1 m-20 rounded-xl">
+        <Home />
+      </div>
     </div>
   );
 }
