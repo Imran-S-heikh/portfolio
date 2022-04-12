@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?2277ee7773ac283dbebc72ac16f1e33d#iefix") format("embedded-opentype"),
-url("./icons.woff2?2277ee7773ac283dbebc72ac16f1e33d") format("woff2"),
-url("./icons.woff?2277ee7773ac283dbebc72ac16f1e33d") format("woff");
+    src: url("./icons.eot?8fbf2fb2f0b33867cf26269876a4c211#iefix") format("embedded-opentype"),
+url("./icons.woff2?8fbf2fb2f0b33867cf26269876a4c211") format("woff2"),
+url("./icons.woff?8fbf2fb2f0b33867cf26269876a4c211") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -18,4 +18,16 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 
 .icon-github:before {
     content: "\f101";
+}
+.icon-linkedin:before {
+    content: "\f102";
+}
+.icon-telegram:before {
+    content: "\f103";
+}
+.icon-twitter:before {
+    content: "\f104";
+}
+.icon-whatsapp:before {
+    content: "\f105";
 }

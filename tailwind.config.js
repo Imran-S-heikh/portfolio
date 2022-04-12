@@ -28,6 +28,9 @@ module.exports = {
       },
       gray: {
         base: "#1a1f28"
+      },
+      yellow: {
+        base: "#c89c45"
       }
     }
   },
