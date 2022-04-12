@@ -25,6 +25,9 @@ module.exports = {
       },
       contessa: {
         base: "#be6069"
+      },
+      gray: {
+        base: "#1a1f28"
       }
     }
   },

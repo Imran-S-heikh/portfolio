@@ -2,16 +2,14 @@ import React from 'react'
 import TabOptions from "../../molecules/TabOptions.mole"
 import Navigation from "../navigation/Navigation.component"
 
-type Props = {}
-
-function Header({}: Props) {
+function Header() {
   return (
-    <header className="m-5">
-        <div className="flex items-center">
+    <header className="mt-4">
+        <div className="flex items-center mx-5">
             <TabOptions/>
 
             <div className="flex-1 text-center">
-                <p className="text-white-muted">james_collins</p>
+                <p className="text-white-muted">imran_shaikh</p>
             </div>
         </div>
         <div className="mt-6">
