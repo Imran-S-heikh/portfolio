@@ -3,11 +3,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        card: '0 -35px 60px #1f2e3e'
+      }
+    },
     colors: {
       black: {
         base: "#0d1117",
-        dark: "#010409"
+        dark: "#010409",
+        deep: "#0a0d12"
       },
       white: {
         base: "#eaeef6",
@@ -15,7 +20,8 @@ module.exports = {
         muted: "#767d87"
       },
       danube: {
-        base: "#7ec9fe"
+        base: "#7ec9fe",
+        dark: "#1a2735"
       },
       green: {
         base: "#a1bc8a"
@@ -30,8 +36,11 @@ module.exports = {
         base: "#1a1f28"
       },
       yellow: {
-        base: "#c89c45"
-      }
+        base: "#dbab4d",
+        dark: "#8a6e35"
+      },
+      perfume: "#c9a1f5",
+      transparent: "transparent"
     }
   },
   plugins: [],

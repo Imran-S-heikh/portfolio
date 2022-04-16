@@ -1,0 +1,33 @@
+.terminal {
+    &-view {
+        // margin-left: 10px;
+        white-space: pre;
+
+        .caret {
+            position: relative;
+            // width: 0px;
+            &::before {
+                content: '';
+                position: absolute;
+                // position: relative;
+                width: 14px;
+                height: 4px;
+                background: rebeccapurple;
+                display: inline-block;
+                left: -12px;
+                bottom: -4px;
+                animation: blink 600ms linear infinite alternate;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: .1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
