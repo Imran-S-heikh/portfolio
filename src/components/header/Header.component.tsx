@@ -1,6 +1,4 @@
-import React from 'react'
 import TabOptions from "../../molecules/TabOptions.mole"
-import Navigation from "../navigation/Navigation.component"
 
 function Header() {
   return (

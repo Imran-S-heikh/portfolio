@@ -4,9 +4,7 @@ import Icon from "../../molecules/Icon.mole";
 import Terminal from "../../components/terminal/Terminal.component"
 import Navigation from "../../components/navigation/Navigation.component";
 
-type Props = {}
-
-function Projects({ }: Props) {
+function Projects() {
     return (
         <div className="flex flex-col flex-1">
             <Navigation className="mt-6" />
