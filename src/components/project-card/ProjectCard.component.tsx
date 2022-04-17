@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React from 'react'
+import CommentText from "../../molecules/CommentText.mole";
 
 type Props = {
   name: string,
@@ -18,13 +19,11 @@ function ProjectCard({ name, commits, overviews, link,className }: Props) {
       </div>
 
       <div className="bg-black-deep pb-5 rounded-md border border-black-dark mt-3 text-white-muted text-ld font-medium leading-5">
-        <p className="px-5 py-3">
-          {'/**'}
-          {overviews.map(ov => (
-            <p>&nbsp;* {ov}</p>
-          ))}
-          &nbsp;{'*/'}
-        </p>
+
+        <CommentText
+          text={overviews}
+          className="px-5 py-3"
+        /> 
 
         <a href={link} target="_blank" rel="noreferrer" className="my-5 cursor-pointer block hover:bg-yellow-base transition-colors duration-150 active:opacity-50 bg-yellow-dark w-full  text-left px-5 py-1">
           <span className="text-black-base text-md font-medium">see the project</span>

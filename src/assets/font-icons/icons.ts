@@ -1,5 +1,7 @@
 export type IconsId =
+  | "chevron-right-ii"
   | "chevron-right"
+  | "folder"
   | "github"
   | "linkedin"
   | "telegram"
@@ -7,7 +9,9 @@ export type IconsId =
   | "whatsapp";
 
 export type IconsKey =
+  | "ChevronRightIi"
   | "ChevronRight"
+  | "Folder"
   | "Github"
   | "Linkedin"
   | "Telegram"
@@ -15,7 +19,9 @@ export type IconsKey =
   | "Whatsapp";
 
 export enum Icons {
+  ChevronRightIi = "chevron-right-ii",
   ChevronRight = "chevron-right",
+  Folder = "folder",
   Github = "github",
   Linkedin = "linkedin",
   Telegram = "telegram",
@@ -24,10 +30,12 @@ export enum Icons {
 }
 
 export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
-  [Icons.ChevronRight]: "61697",
-  [Icons.Github]: "61698",
-  [Icons.Linkedin]: "61699",
-  [Icons.Telegram]: "61700",
-  [Icons.Twitter]: "61701",
-  [Icons.Whatsapp]: "61702",
+  [Icons.ChevronRightIi]: "61697",
+  [Icons.ChevronRight]: "61698",
+  [Icons.Folder]: "61699",
+  [Icons.Github]: "61700",
+  [Icons.Linkedin]: "61701",
+  [Icons.Telegram]: "61702",
+  [Icons.Twitter]: "61703",
+  [Icons.Whatsapp]: "61704",
 };

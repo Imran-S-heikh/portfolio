@@ -1,14 +1,15 @@
-import Tarminal from "../../components/terminal/Terminal.component"
-import Icon from "../../molecules/Icon.mole"
-import ProjectCard from "../../components/project-card/ProjectCard.component"
-import Navigation from "../../components/navigation/Navigation.component"
+import React from 'react'
+import ProjectCard from "../../components/project-card/ProjectCard.component";
+import Icon from "../../molecules/Icon.mole";
+import Terminal from "../../components/terminal/Terminal.component"
+import Navigation from "../../components/navigation/Navigation.component";
 
-function Home() {
+type Props = {}
+
+function Projects({ }: Props) {
     return (
         <div className="flex flex-col flex-1">
-            <div className="mt-6 ">
-                <Navigation />
-            </div>
+            <Navigation className="mt-6" />
             <div className="justify-center items-center flex-1 flex my-10">
 
                 <div className="grid gap-[100px] grid-cols-2 min-h-[50vh]">
@@ -22,7 +23,7 @@ function Home() {
                             <h4 className="text-white-base font-semibold">{'//'} write the code below to continue:</h4>
                             <div className="flex mt-5 items-center">
                                 <Icon icon="chevron-right" className="text-perfume text-2xl" />
-                                <Tarminal />
+                                <Terminal />
                             </div>
                         </div>
                     </div>
@@ -68,10 +69,7 @@ function Home() {
                 </div>
             </div>
         </div>
-
-
-
     )
 }
 
-export default Home
+export default Projects;

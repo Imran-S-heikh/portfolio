@@ -21,9 +21,6 @@ function Header() {
           Design Credit: Yanka Darelova
         </a>
       </div>
-      <div className="mt-6">
-        <Navigation />
-      </div>
     </header>
   )
 }

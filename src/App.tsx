@@ -2,7 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import './App.scss';
 import Footer from "./components/footer/Footer.component";
 import Header from "./components/header/Header.component";
+import About from "./pages/about/About.page";
 import Home from "./pages/home/Home.page";
+import Projects from "./pages/projects/Projects.page";
 
 function App() {
   return (
@@ -11,13 +13,11 @@ function App() {
         <div className="flex flex-col h-full">
           <Header />
 
-          <div className="justify-center items-center flex-1 flex my-10">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<h1>About page</h1>} />
-              <Route path="/projects" element={<h1>Projects Page</h1>} />
+              <Route path="/about" element={<About/>} />
+              <Route path="/projects" element={<Projects/>} />
             </Routes>
-          </div>
 
           <Footer />
         </div>

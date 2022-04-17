@@ -3,10 +3,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+
     extend: {
       dropShadow: {
         card: '0 -35px 60px #1f2e3e'
-      }
+      },
+      borderWidth: {
+        DEFAULT: '1.5px',
+      },
     },
     colors: {
       black: {
@@ -33,7 +37,7 @@ module.exports = {
         base: "#be6069"
       },
       gray: {
-        base: "#1a1f28"
+        base: "#242a36"
       },
       yellow: {
         base: "#dbab4d",
