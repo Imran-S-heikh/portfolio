@@ -2,7 +2,7 @@ import Accordion from "../../components/accordion/Accordion.component"
 import Navigation from "../../components/navigation/Navigation.component"
 import CommentText from "../../molecules/CommentText.mole"
 import Hide from "../../molecules/Hide.mole"
-import Icon from "../../molecules/Icon.mole"
+import { File } from "../../pages/about/about.data"
 import { data } from "./about.data"
 
 function About() {
@@ -34,12 +34,13 @@ function About() {
                 <div className="ml-2 ">
                     {data.map((item, i) => (
                         <Hide
+                            key={i}
                             open={item.type === "folder"}
                         >
-                            <Accordion key={i} defaultOpen={item.open} label={item.name} >
-                                {item.children.map(citem => (
-                                    <div className="ml-6 my-1 flex items-center gap-2">
-                                        <Icon icon="file" className="text-perfume text-xl" />
+                            <Accordion  defaultOpen={item.open} label={item.name} >
+                                {item.children.map((citem,i) => (
+                                    <div key={`${i}-${i}`} className="ml-6 my-1 flex items-center gap-2">
+                                        <img className="w-4 object-fit" src={(citem as File).image} /> 
                                         <h1 className="text-white-muted text-md">{citem.name}</h1>
                                     </div>
                                 ))}

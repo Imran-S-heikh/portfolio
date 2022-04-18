@@ -8,14 +8,14 @@ type Props = {
 
 function CommentText({text,className}: Props) {
     return (
-        <p className={clsx(className)}>
+        <div className={clsx(className)}>
             {'/**'}
-            {text.map(ov => (
-                <p>&nbsp;* {ov}</p>
+            {text.map((ov,i) => (
+                <p key={i}>&nbsp;* {ov}</p>
             ))}
             &nbsp;{'*/'}
-        </p>
+        </div>
     )
 }
 
-export default CommentText
+export default CommentText;

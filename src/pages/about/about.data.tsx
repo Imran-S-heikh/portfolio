@@ -1,3 +1,20 @@
+import api from "../../assets/icons/api.png";
+import atomicCss from "../../assets/icons/atomic-css.png";
+import css from "../../assets/icons/css.png";
+import docker from "../../assets/icons/docker.png";
+import firebase from "../../assets/icons/firebase.png";
+import bash from "../../assets/icons/gnu-bash.png";
+import html from "../../assets/icons/html.png";
+import js from "../../assets/icons/js.png";
+import mongodb from "../../assets/icons/mongodb.png";
+import react from "../../assets/icons/react.png";
+import rust from "../../assets/icons/rust.png";
+import sass from "../../assets/icons/sass.png";
+import sql from "../../assets/icons/sql.png";
+import tailwind from "../../assets/icons/tailwind-css.png";
+import typescript from "../../assets/icons/typescript.png";
+import git from "../../assets/icons/git.png";
+
 export interface File {
     name: string,
     image: string,
@@ -23,43 +40,49 @@ export const data: Folder[] = [
         children: [
             {
                 name: "Hypertext Markup Language (HTML)",
-                image: "",
+                image: html,
                 content: [],
                 type: "file"
             },
             {
                 name: "Cascading Style Sheet (CSS)",
-                image: "",
+                image: css,
                 content: [],
                 type: "file"
             },
             {
                 name: "Syntactically Awesome Style Sheet (SASS)",
-                image: "",
+                image: sass,
                 content: [],
                 type: "file"
             },
             {
                 name: "Javascript (JS)",
-                image: "",
+                image: js,
                 content: [],
                 type: "file"
             },
             {
                 name: "Typescript (TS)",
-                image: "",
+                image: typescript,
                 content: [],
                 type: "file"
             },
             {
                 name: "Bash Script",
-                image: "",
+                image: bash,
+                content: [],
+                type: "file"
+            },
+            {
+                name: "Structured Query Language (SQL)",
+                image: sql,
                 content: [],
                 type: "file"
             },
             {
                 name: "Rust - Blazingly Fast with Trust",
-                image: "",
+                image: rust,
                 content: [],
                 type: "file"
             },
@@ -73,37 +96,55 @@ export const data: Folder[] = [
         children: [
             {
                 name: "Git",
-                image: "",
+                image: git,
                 content: [],
                 type: "file"
             },
             {
                 name: "Tailwindcss",
-                image: "",
+                image: tailwind,
                 content: [],
                 type: "file"
             },
             {
                 name: "Atomic CSS",
-                image: "",
+                image: atomicCss,
                 content: [],
                 type: "file"
             },
             {
                 name: "MongoDB",
-                image: "",
+                image: mongodb,
                 content: [],
                 type: "file"
             },
             {
                 name: "React",
-                image: "",
+                image: react,
+                content: [],
+                type: "file"
+            },
+            {
+                name: "Rest-API",
+                image: api,
                 content: [],
                 type: "file"
             },
             {
                 name: "React Native",
-                image: "",
+                image: react,
+                content: [],
+                type: "file"
+            },
+            {
+                name: "Docker",
+                image: docker,
+                content: [],
+                type: "file"
+            },
+            {
+                name: "Firebase",
+                image: firebase,
                 content: [],
                 type: "file"
             }
