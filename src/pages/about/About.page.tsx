@@ -40,7 +40,7 @@ function About() {
                             <Accordion  defaultOpen={item.open} label={item.name} >
                                 {item.children.map((citem,i) => (
                                     <div key={`${i}-${i}`} className="ml-6 my-1 flex items-center gap-2">
-                                        <img className="w-4 object-fit" src={(citem as File).image} /> 
+                                        <img className="w-4 object-fit" src={(citem as File).image} alt={item.name} /> 
                                         <h1 className="text-white-muted text-md">{citem.name}</h1>
                                     </div>
                                 ))}
