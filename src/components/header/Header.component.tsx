@@ -1,23 +1,20 @@
 import TabOptions from "../../molecules/TabOptions.mole"
+import Navigation from "../navigation/Navigation.component"
 
 function Header() {
   return (
-    <header className="mt-4">
-      <div className="flex items-center mx-5">
-        <TabOptions />
+    <header className="">
+      <div className="flex border-b border-gray-base ">
 
-        <div className="flex-1 text-center">
-          <p className="text-white-muted">imran_shaikh</p>
+        <div className="ml-5 border-r border-gray-base flex items-center">
+          <p className="text-gray-light mr-10">micheal-whatever</p>
         </div>
 
-        <a
-          href="https://dribbble.com/YankaD"
-          target="_blank"
-          rel="noreferrer"
-          className="font-semibold transition-colors duration-150 text-white-muted text-sm opacity-70 hover:text-yellow-base tracking-tighter active:opacity-50"
-        >
-          Design Credit: Yanka Darelova
-        </a>
+        <div className="flex-1">
+          <Navigation/>
+        </div>
+
+
       </div>
     </header>
   )

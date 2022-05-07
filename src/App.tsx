@@ -8,8 +8,8 @@ import Projects from "./pages/projects/Projects.page";
 
 function App() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black-dark relative">
-      <div className="bg-black-base flex-1 absolute inset-10 rounded-xl">
+    <div className="flex justify-center items-center min-h-screen relative font-fira">
+      <div className="bg-blue-base flex-1 absolute inset-10 rounded-xl border border-gray-base">
         <div className="flex flex-col h-full">
           <Header />
 

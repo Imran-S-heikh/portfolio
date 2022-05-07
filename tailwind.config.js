@@ -4,47 +4,46 @@ module.exports = {
   ],
   theme: {
 
-    extend: {
-      dropShadow: {
-        card: '0 -35px 60px #1f2e3e'
-      },
-      borderWidth: {
-        DEFAULT: '1.5px',
-      },
+    fontFamily: {
+      'fira': ['"Fira Code"', 'monospace']
     },
+
+    fontSize: {
+      'sm': ['0.875rem', '1.25rem'],
+      'base': ['1rem', '1.25rem'],
+      'lg': ['1.125rem', '1.5rem'],
+      '3xl': ['2rem', '2.625rem'],
+      '6xl': ['3.875rem', '5rem']
+    },
+
     colors: {
-      black: {
-        base: "#0d1117",
-        dark: "#010409",
-        deep: "#0a0d12"
+      'black': {
+        base: '#01080E'
       },
-      white: {
-        base: "#eaeef6",
-        light: "#cfd3da",
-        muted: "#767d87"
+      'blue': {
+        base: '#011627',
+        dark: '#011221'
       },
-      danube: {
-        base: "#7ec9fe",
-        dark: "#1a2735"
+      'iris': {
+        base: '#4D5BCE'
       },
-      green: {
-        base: "#a1bc8a"
+      'green': {
+        base: '#3C9D93',
+        light: '#43D9AD'
       },
-      putty: {
-        base: "#eaca8a"
+      'gray': {
+        base: '#1E2D3D',
+        light: '#607B96'
       },
-      contessa: {
-        base: "#be6069"
+      'orange': {
+        base: '#E99287',
+        light: '#FEA55F'
       },
-      gray: {
-        base: "#242a36"
-      },
-      yellow: {
-        base: "#dbab4d",
-        dark: "#8a6e35"
-      },
-      perfume: "#c9a1f5",
-      transparent: "transparent"
+      'white': {
+        light: '#ffffff',
+        base: '#E5E9F0'
+      }
+
     }
   },
   plugins: [],

@@ -1,0 +1,12 @@
+.game-container {
+    background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
+    border: 1px solid #000;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(64px);
+    border-radius: 8px;
+
+    .close-btn {
+        background: radial-gradient(73.08% 73.08% at 50% 26.92%, #196C6A 15.1%, #114B4A 100%);
+        box-shadow: 2px 2px 4px #0D4341, inset 0px 1px 2px #1A8277;
+    }
+}
