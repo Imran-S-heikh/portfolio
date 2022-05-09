@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?edc9e9989365a98755b750b37a11de7c#iefix") format("embedded-opentype"),
-url("./icons.woff2?edc9e9989365a98755b750b37a11de7c") format("woff2"),
-url("./icons.woff?edc9e9989365a98755b750b37a11de7c") format("woff");
+    src: url("./icons.eot?42ef712a12ad5893334e35a0a03f7de4#iefix") format("embedded-opentype"),
+url("./icons.woff2?42ef712a12ad5893334e35a0a03f7de4") format("woff2"),
+url("./icons.woff?42ef712a12ad5893334e35a0a03f7de4") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -16,36 +16,45 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-up:before {
+.icon-arrow-down:before {
     content: "\f101";
 }
-.icon-chevron-right-ii:before {
+.icon-arrow-left:before {
     content: "\f102";
 }
-.icon-chevron-right:before {
+.icon-arrow-right:before {
     content: "\f103";
 }
-.icon-close:before {
+.icon-arrow-up:before {
     content: "\f104";
 }
-.icon-file:before {
+.icon-chevron-right-ii:before {
     content: "\f105";
 }
-.icon-folder:before {
+.icon-chevron-right:before {
     content: "\f106";
 }
-.icon-github:before {
+.icon-close:before {
     content: "\f107";
 }
-.icon-linkedin:before {
+.icon-file:before {
     content: "\f108";
 }
-.icon-telegram:before {
+.icon-folder:before {
     content: "\f109";
 }
-.icon-twitter:before {
+.icon-github:before {
     content: "\f10a";
 }
-.icon-whatsapp:before {
+.icon-linkedin:before {
     content: "\f10b";
+}
+.icon-telegram:before {
+    content: "\f10c";
+}
+.icon-twitter:before {
+    content: "\f10d";
+}
+.icon-whatsapp:before {
+    content: "\f10e";
 }

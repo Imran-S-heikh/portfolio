@@ -1,13 +1,16 @@
 {
-    "arrow-up": 61697,
-    "chevron-right-ii": 61698,
-    "chevron-right": 61699,
-    "close": 61700,
-    "file": 61701,
-    "folder": 61702,
-    "github": 61703,
-    "linkedin": 61704,
-    "telegram": 61705,
-    "twitter": 61706,
-    "whatsapp": 61707
+    "arrow-down": 61697,
+    "arrow-left": 61698,
+    "arrow-right": 61699,
+    "arrow-up": 61700,
+    "chevron-right-ii": 61701,
+    "chevron-right": 61702,
+    "close": 61703,
+    "file": 61704,
+    "folder": 61705,
+    "github": 61706,
+    "linkedin": 61707,
+    "telegram": 61708,
+    "twitter": 61709,
+    "whatsapp": 61710
 }

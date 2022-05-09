@@ -4,6 +4,10 @@ module.exports = {
   ],
   theme: {
 
+    boxShadow: {
+      'inset-sm': 'inset 1px 5px 11px rgba(2, 18, 27, 0.71)',
+    },
+
     fontFamily: {
       'fira': ['"Fira Code"', 'monospace']
     },
@@ -32,7 +36,9 @@ module.exports = {
         light: '#43D9AD'
       },
       'gray': {
+        dark: '#1C2B3A',
         base: '#1E2D3D',
+        deep: '#263B50',
         light: '#607B96'
       },
       'orange': {
