@@ -4,6 +4,17 @@ module.exports = {
   ],
   theme: {
 
+
+    extend: {
+      fontSize: {
+        'sm': ['0.875rem', '1.25rem'],
+        'base': ['1rem', '1.25rem'],
+        'lg': ['1.125rem', '1.5rem'],
+        '3xl': ['2rem', '2.625rem'],
+        '6xl': ['3.875rem', '5rem']
+      },
+    },
+
     boxShadow: {
       'inset-sm': 'inset 1px 5px 11px rgba(2, 18, 27, 0.71)',
     },
@@ -12,13 +23,7 @@ module.exports = {
       'fira': ['"Fira Code"', 'monospace']
     },
 
-    fontSize: {
-      'sm': ['0.875rem', '1.25rem'],
-      'base': ['1rem', '1.25rem'],
-      'lg': ['1.125rem', '1.5rem'],
-      '3xl': ['2rem', '2.625rem'],
-      '6xl': ['3.875rem', '5rem']
-    },
+
 
     colors: {
       'black': {

@@ -14,6 +14,7 @@ import sql from "../../assets/icons/sql.png";
 import tailwind from "../../assets/icons/tailwind-css.png";
 import typescript from "../../assets/icons/typescript.png";
 import git from "../../assets/icons/git.png";
+import { IconsId } from "../../assets/font-icons/icons";
 
 export interface File {
     name: string,
@@ -153,3 +154,23 @@ export const data: Folder[] = [
 
 
 ];
+
+export interface NavItemProps {
+    path: string,
+    icon: IconsId
+}
+
+export const aboutNavData: NavItemProps[] = [
+    {
+        path: 'terminal',
+        icon: 'terminal'
+    },
+    {
+        path: 'info',
+        icon: 'info'
+    },
+    {
+        path: 'games',
+        icon: 'game'
+    }
+]

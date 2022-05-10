@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?42ef712a12ad5893334e35a0a03f7de4#iefix") format("embedded-opentype"),
-url("./icons.woff2?42ef712a12ad5893334e35a0a03f7de4") format("woff2"),
-url("./icons.woff?42ef712a12ad5893334e35a0a03f7de4") format("woff");
+    src: url("./icons.eot?7d81d51ff6b22bbb463312c5705b9997#iefix") format("embedded-opentype"),
+url("./icons.woff2?7d81d51ff6b22bbb463312c5705b9997") format("woff2"),
+url("./icons.woff?7d81d51ff6b22bbb463312c5705b9997") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -43,18 +43,27 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-folder:before {
     content: "\f109";
 }
-.icon-github:before {
+.icon-game:before {
     content: "\f10a";
 }
-.icon-linkedin:before {
+.icon-github:before {
     content: "\f10b";
 }
-.icon-telegram:before {
+.icon-info:before {
     content: "\f10c";
 }
-.icon-twitter:before {
+.icon-linkedin:before {
     content: "\f10d";
 }
-.icon-whatsapp:before {
+.icon-telegram:before {
     content: "\f10e";
+}
+.icon-terminal:before {
+    content: "\f10f";
+}
+.icon-twitter:before {
+    content: "\f110";
+}
+.icon-whatsapp:before {
+    content: "\f111";
 }

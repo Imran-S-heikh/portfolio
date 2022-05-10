@@ -9,7 +9,7 @@ interface NavitemProps {
 
 function Navitem({ title, path,className }: NavitemProps) {
 
-  const match = useMatch(path);
+  const match = useMatch(`${path}/*`);
 
   return (
     <Link to={path} className="block h-full">
@@ -41,7 +41,7 @@ function Navigation({ className }: NavigationProps) {
 
         <div className="flex-1"></div>
         <ul className="">
-          <Navitem title="_contact-me" path="/contact" className="border-l" />
+          <Navitem title="_contact-me" path="/contact" className="border-l border-r-0" />
         </ul>
     </nav>
   )

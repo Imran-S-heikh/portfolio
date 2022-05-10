@@ -8,9 +8,12 @@
     "close": 61703,
     "file": 61704,
     "folder": 61705,
-    "github": 61706,
-    "linkedin": 61707,
-    "telegram": 61708,
-    "twitter": 61709,
-    "whatsapp": 61710
+    "game": 61706,
+    "github": 61707,
+    "info": 61708,
+    "linkedin": 61709,
+    "telegram": 61710,
+    "terminal": 61711,
+    "twitter": 61712,
+    "whatsapp": 61713
 }
