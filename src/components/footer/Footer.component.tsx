@@ -27,7 +27,7 @@ function Footer() {
                <SocialLink icon="twitter" link="https://twitter.com/Imran_S_haikh" /> 
             </div>
 
-            <a href="https://github.com/Imran-S-heikh" target="_blank" className="flex items-center border-l border-gray-base h-full pl-6">
+            <a href="https://github.com/Imran-S-heikh" target="_blank" className="flex items-center border-l border-gray-base h-full px-6">
                 <span className="text-gray-light font-medium mr-2">@imran-s-heikh</span>
                 <Icon icon="github" className="text-gray-light text-lg" /> 
             </a>

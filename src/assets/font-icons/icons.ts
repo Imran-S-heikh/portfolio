@@ -6,12 +6,15 @@ export type IconsId =
   | "chevron-right-ii"
   | "chevron-right"
   | "close"
+  | "file-ii"
   | "file"
   | "folder"
   | "game"
   | "github"
   | "info"
   | "linkedin"
+  | "mail"
+  | "phone"
   | "telegram"
   | "terminal"
   | "twitter"
@@ -25,12 +28,15 @@ export type IconsKey =
   | "ChevronRightIi"
   | "ChevronRight"
   | "Close"
+  | "FileIi"
   | "File"
   | "Folder"
   | "Game"
   | "Github"
   | "Info"
   | "Linkedin"
+  | "Mail"
+  | "Phone"
   | "Telegram"
   | "Terminal"
   | "Twitter"
@@ -44,12 +50,15 @@ export enum Icons {
   ChevronRightIi = "chevron-right-ii",
   ChevronRight = "chevron-right",
   Close = "close",
+  FileIi = "file-ii",
   File = "file",
   Folder = "folder",
   Game = "game",
   Github = "github",
   Info = "info",
   Linkedin = "linkedin",
+  Mail = "mail",
+  Phone = "phone",
   Telegram = "telegram",
   Terminal = "terminal",
   Twitter = "twitter",
@@ -64,14 +73,17 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.ChevronRightIi]: "61701",
   [Icons.ChevronRight]: "61702",
   [Icons.Close]: "61703",
-  [Icons.File]: "61704",
-  [Icons.Folder]: "61705",
-  [Icons.Game]: "61706",
-  [Icons.Github]: "61707",
-  [Icons.Info]: "61708",
-  [Icons.Linkedin]: "61709",
-  [Icons.Telegram]: "61710",
-  [Icons.Terminal]: "61711",
-  [Icons.Twitter]: "61712",
-  [Icons.Whatsapp]: "61713",
+  [Icons.FileIi]: "61704",
+  [Icons.File]: "61705",
+  [Icons.Folder]: "61706",
+  [Icons.Game]: "61707",
+  [Icons.Github]: "61708",
+  [Icons.Info]: "61709",
+  [Icons.Linkedin]: "61710",
+  [Icons.Mail]: "61711",
+  [Icons.Phone]: "61712",
+  [Icons.Telegram]: "61713",
+  [Icons.Terminal]: "61714",
+  [Icons.Twitter]: "61715",
+  [Icons.Whatsapp]: "61716",
 };

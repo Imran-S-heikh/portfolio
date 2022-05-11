@@ -23,6 +23,13 @@ export interface File {
     type: "file"
 }
 
+export interface FileIcon {
+    name: string,
+    icon: IconsId,
+    content: string[],
+    type: "file"
+}
+
 export interface Folder {
     name: string,
     color: string,
@@ -31,12 +38,106 @@ export interface Folder {
     type: "folder"
 }
 
+export interface FolderIcon {
+    name: string,
+    color: string,
+    open?: boolean,
+    children: FileIcon[],
+    type: "folder"
+}
 
-export const data: Folder[] = [
+export const infoData: FolderIcon[] = [
+    {
+        name: "bio",
+        color: "text-iris-base",
+        open: false,
+        type: "folder",
+        children: [
+            {
+                name: "about-me",
+                icon: "file-ii",
+                content: [
+                    "About me",
+                    "I have 3 years of exprience in web",
+                    "development lorem this sit init let",
+                    "go happen the is not a good meaning word,",
+                    "so if there is nothing to do then do nothing.",
+                    "If you feel bad this was not my intension. ",
+                    "",
+                    "So, tif tiem is nowthing when its wasted,",
+                    "but it can be a huge thing when there is dead",
+                    "line and you have warning. Man that sucks."
+                ],
+                type: "file"
+            },
+            {
+                name: "about-work",
+                icon: "file-ii",
+                content: [],
+                type: "file"
+            }
+        ]
+    },
+    {
+        name: "interests",
+        color: "text-orange-base",
+        open: false,
+        type: "folder",
+        children: [
+            {
+                name: "travels",
+                icon: "file-ii",
+                content: [],
+                type: "file"
+            },
+            {
+                name: "swiming",
+                icon: "file-ii",
+                content: [],
+                type: "file"
+            },
+            {
+                name: "cricket",
+                icon: "file-ii",
+                content: [],
+                type: "file"
+            }
+        ]
+    },
+    {
+        name: "education",
+        color: "text-green-base",
+        open: false,
+        type: "folder",
+        children: [
+            {
+                name: "high-school",
+                icon: "file-ii",
+                content: [],
+                type: "file"
+            },
+            {
+                name: "college",
+                icon: "file-ii",
+                content: [],
+                type: "file"
+            },
+            {
+                name: "university",
+                icon: "file-ii",
+                content: [],
+                type: "file"
+            }
+        ]
+    },
+]
+
+
+export const skillsData: Folder[] = [
     {
         name: "Languages",
-        color: "red",
-        open: true,
+        color: "text-orange-light",
+        open: false,
         type: "folder",
         children: [
             {
@@ -91,7 +192,7 @@ export const data: Folder[] = [
     },
     {
         name: "Technologies",
-        color: "red",
+        color: "text-green-light",
         open: false,
         type: "folder",
         children: [
