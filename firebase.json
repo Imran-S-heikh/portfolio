@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "imran-dev-v1",
     "public": "build",
     "ignore": [
       "firebase.json",
