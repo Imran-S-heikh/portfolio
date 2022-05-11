@@ -1,15 +1,8 @@
 import clsx from "clsx"
 import { Link, Route, Routes, useMatch, useNavigate } from "react-router-dom"
 import Accordion from "../../components/accordion/Accordion.component"
-import CommentText from "../../molecules/CommentText.mole"
-import Hide from "../../molecules/Hide.mole"
 import Icon from "../../molecules/Icon.mole"
 import { aboutNavData, File, infoData, NavItemProps, skillsData } from "../../pages/about/about.data"
-import docker from "../../assets/icons/docker.png";
-import firebase from "../../assets/icons/firebase.png";
-import bash from "../../assets/icons/gnu-bash.png";
-import html from "../../assets/icons/html.png";
-import js from "../../assets/icons/js.png";
 import { useEffect } from "react"
 
 function TerminalSection() {
