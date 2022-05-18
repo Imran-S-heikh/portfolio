@@ -33,7 +33,7 @@ function PersonalInfo() {
                     />
                     <Accordion.Body className="my-3">
                         {infoData.map((item, i) => (
-                            <Accordion defaultOpen={item.open}>
+                            <Accordion key={i} defaultOpen={item.open}>
                                 <Accordion.Header
                                     folder
                                     label={item.name}
@@ -62,7 +62,7 @@ function PersonalInfo() {
 
 
                         {skillsData.map((item, i) => (
-                            <Accordion defaultOpen={item.open}>
+                            <Accordion key={i} defaultOpen={item.open}>
                                 <Accordion.Header
                                     folder
                                     label={item.name}
@@ -112,7 +112,6 @@ function NavItem({ path, icon }: NavItemProps) {
 
     const match = useMatch(`/about/${path}`);
 
-    console.log({ match })
 
     return (
         <Link to={path} className="block py-5 active:opacity-50">
@@ -121,24 +120,24 @@ function NavItem({ path, icon }: NavItemProps) {
     )
 }
 
-function AboutNav() {
-    return (
-        <div className="w-20 border-r border-gray-base text-center" >
-            <Link to="terminal" className="block py-5 active:opacity-50">
-                <Icon icon="terminal" className="text-2xl text-gray-deep hover:text-gray-light cursor-pointer" />
-            </Link>
+// function AboutNav() {
+//     return (
+//         <div className="w-20 border-r border-gray-base text-center" >
+//             <Link to="terminal" className="block py-5 active:opacity-50">
+//                 <Icon icon="terminal" className="text-2xl text-gray-deep hover:text-gray-light cursor-pointer" />
+//             </Link>
 
-            <Link to="personal" className="block py-5 active:opacity-50">
-                <Icon icon="info" className="text-2xl text-gray-deep hover:text-gray-light cursor-pointer" />
-            </Link>
+//             <Link to="personal" className="block py-5 active:opacity-50">
+//                 <Icon icon="info" className="text-2xl text-gray-deep hover:text-gray-light cursor-pointer" />
+//             </Link>
 
-            <Link to="games" className="block py-5 active:opacity-50">
-                <Icon icon="game" className="text-2xl text-gray-deep hover:text-gray-light cursor-pointer" />
-            </Link>
+//             <Link to="games" className="block py-5 active:opacity-50">
+//                 <Icon icon="game" className="text-2xl text-gray-deep hover:text-gray-light cursor-pointer" />
+//             </Link>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
 function About() {
 
@@ -150,7 +149,7 @@ function About() {
         if (isRoot) {
             navigate("info");
         }
-    }, [isRoot])
+    }, [isRoot,navigate])
 
     return (
         <div className="flex-1 flex">

@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 
 type Props = {
@@ -6,9 +5,6 @@ type Props = {
     className?: string,
 }
 
-interface ButtonVariant {
-    label: string
-}
 
 function Button({ label, className }: Props) {
     return (
