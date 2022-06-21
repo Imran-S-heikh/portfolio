@@ -141,31 +141,31 @@ export const skillsData: Folder[] = [
         type: "folder",
         children: [
             {
-                name: "Hypertext Markup Language (HTML)",
+                name: "HTML",
                 image: html,
                 content: [],
                 type: "file"
             },
             {
-                name: "Cascading Style Sheet (CSS)",
+                name: "CSS",
                 image: css,
                 content: [],
                 type: "file"
             },
             {
-                name: "Syntactically Awesome Style Sheet (SASS)",
+                name: "SASS",
                 image: sass,
                 content: [],
                 type: "file"
             },
             {
-                name: "Javascript (JS)",
+                name: "Javascript",
                 image: js,
                 content: [],
                 type: "file"
             },
             {
-                name: "Typescript (TS)",
+                name: "Typescript",
                 image: typescript,
                 content: [],
                 type: "file"
@@ -177,13 +177,13 @@ export const skillsData: Folder[] = [
                 type: "file"
             },
             {
-                name: "Structured Query Language (SQL)",
+                name: "SQL",
                 image: sql,
                 content: [],
                 type: "file"
             },
             {
-                name: "Rust - Blazingly Fast with Trust",
+                name: "Rust",
                 image: rust,
                 content: [],
                 type: "file"

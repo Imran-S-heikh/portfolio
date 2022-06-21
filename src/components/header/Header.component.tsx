@@ -6,7 +6,7 @@ function Header() {
       <div className="flex border-b border-gray-base ">
 
         <div className=" border-r border-gray-base flex w-80 items-center">
-          <p className="text-gray-light  pl-5">micheal-whatever</p>
+          <p className="text-gray-light  pl-5">imran-shaikh</p>
         </div>
 
         <div className="flex-1">

@@ -28,7 +28,7 @@ function PersonalInfo() {
                 <Accordion defaultOpen>
                     <Accordion.Header
                         label="persoanl-info"
-                        icon="arrow-right"
+                        // icon="arrow-right"
                         className="h-10 border-b border-gray-base"
                     />
                     <Accordion.Body className="my-3">
@@ -39,7 +39,7 @@ function PersonalInfo() {
                                     label={item.name}
                                     folderClass={item.color}
                                 />
-                                <Accordion.Body>
+                                <Accordion.Body >
                                     {item.children.map((citem, index) => (
                                         <div key={`${i}-${index}`} className="ml-6 my-1 flex items-center gap-2">
                                             <Icon className="w-4 object-fit" icon={citem.icon} />
@@ -166,7 +166,7 @@ function About() {
                     ))}
                 </div>
 
-                <div className="text-gray-light flex-1">
+                <div className="text-gray-light flex-1 overflow-y-auto" style={{maxHeight: "calc( 100vh - 190px)"}}>
                     <Routes>
                         <Route path="/info" element={<PersonalInfo />} />
                         <Route path="/terminal" element={<TerminalSection />} />
