@@ -258,20 +258,29 @@ export const skillsData: Folder[] = [
 
 export interface NavItemProps {
     path: string,
-    icon: IconsId
+    icon: IconsId,
+    label: string
 }
 
 export const aboutNavData: NavItemProps[] = [
     {
         path: 'terminal',
-        icon: 'terminal'
+        icon: 'terminal',
+        label: 'Terminal'
     },
     {
         path: 'info',
-        icon: 'info'
+        icon: 'info',
+        label: 'Info'
     },
     {
         path: 'games',
-        icon: 'game'
+        icon: 'game',
+        label: 'Game'
+    },
+    {
+        path: 'cv',
+        icon: 'cv',
+        label: 'Curriculum Vitae'
     }
 ]

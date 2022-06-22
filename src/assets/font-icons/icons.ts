@@ -7,6 +7,7 @@ export type IconsId =
   | "chevron-right-ii"
   | "chevron-right"
   | "close"
+  | "cv"
   | "done"
   | "figma"
   | "file-ii"
@@ -32,6 +33,7 @@ export type IconsKey =
   | "ChevronRightIi"
   | "ChevronRight"
   | "Close"
+  | "Cv"
   | "Done"
   | "Figma"
   | "FileIi"
@@ -57,6 +59,7 @@ export enum Icons {
   ChevronRightIi = "chevron-right-ii",
   ChevronRight = "chevron-right",
   Close = "close",
+  Cv = "cv",
   Done = "done",
   Figma = "figma",
   FileIi = "file-ii",
@@ -83,19 +86,20 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.ChevronRightIi]: "61702",
   [Icons.ChevronRight]: "61703",
   [Icons.Close]: "61704",
-  [Icons.Done]: "61705",
-  [Icons.Figma]: "61706",
-  [Icons.FileIi]: "61707",
-  [Icons.File]: "61708",
-  [Icons.Folder]: "61709",
-  [Icons.Game]: "61710",
-  [Icons.Github]: "61711",
-  [Icons.Info]: "61712",
-  [Icons.Linkedin]: "61713",
-  [Icons.Mail]: "61714",
-  [Icons.Phone]: "61715",
-  [Icons.Telegram]: "61716",
-  [Icons.Terminal]: "61717",
-  [Icons.Twitter]: "61718",
-  [Icons.Whatsapp]: "61719",
+  [Icons.Cv]: "61705",
+  [Icons.Done]: "61706",
+  [Icons.Figma]: "61707",
+  [Icons.FileIi]: "61708",
+  [Icons.File]: "61709",
+  [Icons.Folder]: "61710",
+  [Icons.Game]: "61711",
+  [Icons.Github]: "61712",
+  [Icons.Info]: "61713",
+  [Icons.Linkedin]: "61714",
+  [Icons.Mail]: "61715",
+  [Icons.Phone]: "61716",
+  [Icons.Telegram]: "61717",
+  [Icons.Terminal]: "61718",
+  [Icons.Twitter]: "61719",
+  [Icons.Whatsapp]: "61720",
 };

@@ -3,6 +3,7 @@ import './App.scss';
 import Footer from "./components/footer/Footer.component";
 import Header from "./components/header/Header.component";
 import About from "./pages/about/About.page";
+import Contact from "./pages/contact/Contact.page";
 import Home from "./pages/home/Home.page";
 import Projects from "./pages/projects/Projects.page";
 
@@ -17,6 +18,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about/*" element={<About/>} />
               <Route path="/projects" element={<Projects/>} />
+              <Route path="/contact" element={<Contact/>}/>
             </Routes>
 
           <Footer />

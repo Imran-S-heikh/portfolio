@@ -15,7 +15,7 @@ module.exports = {
       },
       boxShadow: {
         'inset-sm': 'inset 1px 5px 11px rgba(2, 18, 27, 0.71)',
-        'outline': '0px 0px 5px 2px #1d3448',
+        'outline': '0px 0px 3px 2px #1d3448',
       },
     },
 

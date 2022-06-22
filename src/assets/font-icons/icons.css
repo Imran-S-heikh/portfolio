@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?dab72f554cba50744e392ceae1df1351#iefix") format("embedded-opentype"),
-url("./icons.woff2?dab72f554cba50744e392ceae1df1351") format("woff2"),
-url("./icons.woff?dab72f554cba50744e392ceae1df1351") format("woff");
+    src: url("./icons.eot?3452bdf23a2a7092d079eaa83ad886eb#iefix") format("embedded-opentype"),
+url("./icons.woff2?3452bdf23a2a7092d079eaa83ad886eb") format("woff2"),
+url("./icons.woff?3452bdf23a2a7092d079eaa83ad886eb") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -40,48 +40,51 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-close:before {
     content: "\f108";
 }
-.icon-done:before {
+.icon-cv:before {
     content: "\f109";
 }
-.icon-figma:before {
+.icon-done:before {
     content: "\f10a";
 }
-.icon-file-ii:before {
+.icon-figma:before {
     content: "\f10b";
 }
-.icon-file:before {
+.icon-file-ii:before {
     content: "\f10c";
 }
-.icon-folder:before {
+.icon-file:before {
     content: "\f10d";
 }
-.icon-game:before {
+.icon-folder:before {
     content: "\f10e";
 }
-.icon-github:before {
+.icon-game:before {
     content: "\f10f";
 }
-.icon-info:before {
+.icon-github:before {
     content: "\f110";
 }
-.icon-linkedin:before {
+.icon-info:before {
     content: "\f111";
 }
-.icon-mail:before {
+.icon-linkedin:before {
     content: "\f112";
 }
-.icon-phone:before {
+.icon-mail:before {
     content: "\f113";
 }
-.icon-telegram:before {
+.icon-phone:before {
     content: "\f114";
 }
-.icon-terminal:before {
+.icon-telegram:before {
     content: "\f115";
 }
-.icon-twitter:before {
+.icon-terminal:before {
     content: "\f116";
 }
-.icon-whatsapp:before {
+.icon-twitter:before {
     content: "\f117";
+}
+.icon-whatsapp:before {
+    content: "\f118";
 }

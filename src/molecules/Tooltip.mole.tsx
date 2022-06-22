@@ -28,7 +28,7 @@ function Tooltip({ children, label }: Props) {
                 ref: setReferenceElement,
             })}
 
-            <div ref={setPopperElement} style={styles.popper} {...attributes.popper} className={clsx("transition-opacity duration-150",show ? "opacity-100" : "opacity-0")}>
+            <div ref={setPopperElement} style={styles.popper} {...attributes.popper} className={clsx("transition-opacity duration-150 pointer-events-none",show ? "opacity-100" : "opacity-0")}>
                 <div ref={setArrowElement} style={styles.arrow} >
                     <Icon icon="caret-up" className="text-gray-dark text-lg leading-tight" />
                 </div>
