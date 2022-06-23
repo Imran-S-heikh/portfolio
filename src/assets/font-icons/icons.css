@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?3452bdf23a2a7092d079eaa83ad886eb#iefix") format("embedded-opentype"),
-url("./icons.woff2?3452bdf23a2a7092d079eaa83ad886eb") format("woff2"),
-url("./icons.woff?3452bdf23a2a7092d079eaa83ad886eb") format("woff");
+    src: url("./icons.eot?ce52040e254e569019705779367ac369#iefix") format("embedded-opentype"),
+url("./icons.woff2?ce52040e254e569019705779367ac369") format("woff2"),
+url("./icons.woff?ce52040e254e569019705779367ac369") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -73,18 +73,21 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-mail:before {
     content: "\f113";
 }
-.icon-phone:before {
+.icon-menu:before {
     content: "\f114";
 }
-.icon-telegram:before {
+.icon-phone:before {
     content: "\f115";
 }
-.icon-terminal:before {
+.icon-telegram:before {
     content: "\f116";
 }
-.icon-twitter:before {
+.icon-terminal:before {
     content: "\f117";
 }
-.icon-whatsapp:before {
+.icon-twitter:before {
     content: "\f118";
+}
+.icon-whatsapp:before {
+    content: "\f119";
 }

@@ -10,7 +10,7 @@ import Projects from "./pages/projects/Projects.page";
 function App() {
   return (
     <div className="flex  min-h-screen relative font-fira">
-      <div className="bg-blue-base flex-1 m-10 rounded-xl border border-gray-base">
+      <div className="bg-blue-base flex-1 lg:m-10 m-4 rounded-xl border border-gray-base relative overflow-hidden">
         <div className="flex flex-col h-full">
           <Header />
 
@@ -21,7 +21,7 @@ function App() {
               <Route path="/contact" element={<Contact/>}/>
             </Routes>
 
-          <Footer />
+          <Footer className="lg:flex hidden" />
         </div>
 
       </div>

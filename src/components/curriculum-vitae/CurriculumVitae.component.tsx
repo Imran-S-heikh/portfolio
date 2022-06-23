@@ -2,9 +2,8 @@ import jsPDF from "jspdf";
 import React, { useRef } from 'react'
 import Button from "../../molecules/Buttons.mole";
 
-type Props = {}
 
-function CurriculumVitae({ }: Props) {
+function CurriculumVitae() {
 
     const cv = useRef<HTMLDivElement | null>(null);
 

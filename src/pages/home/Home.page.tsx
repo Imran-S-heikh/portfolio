@@ -27,35 +27,38 @@ function Home() {
         <div className="flex flex-col flex-1">
             <div className="justify-center items-center flex-1 flex my-10">
 
-                <div className="grid gap-[100px] grid-cols-2 min-h-[50vh]">
-                    <div className="flex flex-col justify-around">
+                <div className="grid gap-[100px] grid-cols-1 xl:grid-cols-2 min-h-[50vh]">
+                    <div className="flex flex-col justify-around relative sm:p-0 p-4">
                         <div className="">
                             <h3 className="text-white-base mb-2">Hello! I am</h3>
-                            <h1 className="text-6xl text-white-base">Imran Shaikh</h1>
+                            <h1 className="sm:text-6xl text-[11vw] text-white-base ">Imran Shaikh</h1>
                             <div className="flex mt-5 items-center">
-                                <Icon icon="chevron-right" className="text-iris-base text-3xl" />
-                                <p className="text-iris-base text-3xl font-medium">Junior Full Stack Developer</p>
+                                <Icon icon="chevron-right" className="text-iris-base sm:text-2xl" />
+                                <p className="text-iris-base sm:text-3xl font-medium text-[5vw] ml-1">Full Stack Web Developer</p>
                             </div>
                         </div>
                         <div className="">
-                            <p className="text-gray-light font-medium">{'//'} complete the game to continue</p>
-                            <p className="text-gray-light font-medium">{'//'} you can also see it on my Github page</p>
+                            {/* <p className="text-gray-light font-medium">{'//'} complete the game to continue</p> */}
+                            <p className="text-gray-light font-medium">{'//'} find my prodile on GitHub</p>
 
-                            <div className="flex text gap-3 items-center mt-2 font-medium">
-                                <span className="text-iris-base">const</span>
-                                <a className="text-green-light" href="https://github/Imran-S-heikh">
+                            <p className="space-x-2 mt-2 font-medium ">
+                                <span className="text-iris-base inline-block">const</span>
+                                <a className="text-green-light inline-block" href="https://github/Imran-S-heikh">
                                     githubLink
                                 </a>
-                                <span className="text-white-base">=</span>
+                                <span className="text-white-base inline-block">=</span>
                                 <a className="text-orange-base" href="https://github/Imran-S-heikh">
                                     "https://github/Imran-S-heikh"
                                     <span className="text-iris-base">;</span>
                                 </a>
-                            </div>
+                            </p>
                         </div>
+                        <div className="absolute top-1/3 left-1/3 w-[50%] h-[450px] bg-iris-base opacity-20 blur-[174px] rotate-[13.51deg]  -z-0 xl:hidden"></div>
+                        <div className="absolute bottom-1/3 right-1/3 w-[50%] h-[450px] bg-green-light opacity-20 blur-[174px] rotate-[13.51deg] -z-0 xl:hidden"></div>
                     </div>
 
-                    <div className="relative">
+
+                    <div className="relative hidden xl:block">
                         <div className="absolute bottom-1/3 right-1/3 w-[450px] h-[450px] bg-green-light opacity-40 blur-[174px] rotate-[13.51deg] -z-0"></div>
                         <div className="absolute top-1/3 left-1/3 w-[450px] h-[450px] bg-iris-base opacity-40 blur-[174px] rotate-[13.51deg]  -z-0"></div>
 

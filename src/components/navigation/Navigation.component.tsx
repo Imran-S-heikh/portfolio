@@ -15,9 +15,9 @@ function Navitem({ title, path,className }: NavitemProps) {
     <Link to={path} className="block h-full">
       <li
         className={clsx(className,match ?
-          "text-white-base border-b-2 border-b-orange-light" :
-          "active:opacity-75 text-gray-light",
-          "hover:text-white-base cursor-pointer border-gray-base border-r transition duration-300 px-10 h-full flex items-center"
+          "text-white-base lg:border-b-2 lg:border-b-orange-light" :
+          "active:opacity-75 text-gray-light lg:border-b-0",
+          "hover:text-white-base cursor-pointer border-gray-base border-b lg:border-r transition duration-300 lg:px-10 px-4 lg:h-full h-14 flex items-center"
         )}
       >
         {title}
@@ -32,8 +32,8 @@ interface NavigationProps {
 
 function Navigation({ className }: NavigationProps) {
   return (
-    <nav className={clsx(className, "bg-black-dark flex")}>
-        <ul className="flex leading-4 h-14">
+    <nav className={clsx(className, "bg-blue-base flex lg:flex-row flex-col")}>
+        <ul className="flex leading-4 lg:h-14 lg:flex-row flex-col">
           <Navitem title="_hello" path="/" />
           <Navitem title="_about me" path="/about" />
           <Navitem title="_projects" path="/projects" />
@@ -41,7 +41,7 @@ function Navigation({ className }: NavigationProps) {
 
         <div className="flex-1"></div>
         <ul className="">
-          <Navitem title="_contact-me" path="/contact" className="border-l border-r-0" />
+          <Navitem title="_contact-me" path="/contact" className="lg:border-l !border-r-0" />
         </ul>
     </nav>
   )

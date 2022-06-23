@@ -2,7 +2,6 @@ import Accordion from "../../components/accordion/Accordion.component";
 import Button from "../../molecules/Buttons.mole";
 import Checkbox from "../../molecules/Checkbox.mole";
 import Icon from "../../molecules/Icon.mole";
-import Tooltip from "../../molecules/Tooltip.mole";
 import { catagories } from "./projects.data";
 
 function ProjectCard() {
@@ -13,10 +12,10 @@ function ProjectCard() {
                 <p className="text-sm text-gray-deep font-semibold">134 commits</p>
             </div>
             <div className="bg-black-base p-3 mt-3 text-sm rounded">
-                /** <br />
-                * hello <br />
-                * world <br />
-                */
+                {"/**"} <br />
+                {"*"} hello <br />
+                {"*"} world <br />
+                {"*/"}
             </div>
             <div className="mt-4">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus.

@@ -5,14 +5,12 @@ import Icon from "../../molecules/Icon.mole"
 import Input from "../../molecules/Input.mole"
 import Textarea from "../../molecules/Textarea.mole"
 
-type Props = {}
-
-function Contact({ }: Props) {
+function Contact() {
 
     const [name,setName] = useState("");
     const [email,setEmail] = useState("")
     const [message,setMessage] = useState("");
-    const [date,setDate] = useState((new Date()).toDateString());
+    const date = (new Date()).toDateString();
 
     return (
         <div className="flex-1 text-gray-light flex">

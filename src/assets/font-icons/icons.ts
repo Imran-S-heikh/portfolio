@@ -18,6 +18,7 @@ export type IconsId =
   | "info"
   | "linkedin"
   | "mail"
+  | "menu"
   | "phone"
   | "telegram"
   | "terminal"
@@ -44,6 +45,7 @@ export type IconsKey =
   | "Info"
   | "Linkedin"
   | "Mail"
+  | "Menu"
   | "Phone"
   | "Telegram"
   | "Terminal"
@@ -70,6 +72,7 @@ export enum Icons {
   Info = "info",
   Linkedin = "linkedin",
   Mail = "mail",
+  Menu = "menu",
   Phone = "phone",
   Telegram = "telegram",
   Terminal = "terminal",
@@ -97,9 +100,10 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.Info]: "61713",
   [Icons.Linkedin]: "61714",
   [Icons.Mail]: "61715",
-  [Icons.Phone]: "61716",
-  [Icons.Telegram]: "61717",
-  [Icons.Terminal]: "61718",
-  [Icons.Twitter]: "61719",
-  [Icons.Whatsapp]: "61720",
+  [Icons.Menu]: "61716",
+  [Icons.Phone]: "61717",
+  [Icons.Telegram]: "61718",
+  [Icons.Terminal]: "61719",
+  [Icons.Twitter]: "61720",
+  [Icons.Whatsapp]: "61721",
 };
