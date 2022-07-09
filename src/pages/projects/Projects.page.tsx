@@ -20,7 +20,7 @@ function ProjectCard() {
             <div className="mt-4">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus.
             </div>
-            <div className="mt-3 space-x-2">
+            <div className="mt-3 grid grid-flow-col gap-3">
                 <Button.Default className="" label="view-project" />
                 <Button.Default className="" label="check-in-github" />
             </div>
@@ -30,9 +30,9 @@ function ProjectCard() {
 
 function Projects() {
     return (
-        <div className="flex-1 flex text-gray-light">
+        <div className="flex-1 flex text-gray-light md:flex-row flex-col">
 
-            <div className="w-80 border-gray-base border-r">
+            <div className="w-full md:w-80 border-gray-base border-r md:pb-0 pb-6">
 
                 <Accordion defaultOpen>
                     <Accordion.Header label="projects" className="h-10 border-b pl-5 border-gray-base" icon="arrow-right" />
@@ -49,14 +49,16 @@ function Projects() {
             </div>
 
             <div className="flex-1">
-                <div className="border-gray-base border-b h-10">
+                <div className="border-gray-base ">
 
-                    <div className="flex items-center border-gray-base border-r w-max h-full px-3">
-                        <p className="mr-10">React; Vue</p>
-                        <Icon icon="close" />
+                    <div className="md:border-b h-10 border-gray-base md:block hidden ">
+                        <div className=" border-r w-max px-3  flex items-center h-full border-gray-base ">
+                            <p className="mr-10">React; Vue</p>
+                            <Icon icon="close" />
+                        </div>
                     </div>
 
-                    <div className="w-5/6 mx-auto py-14 grid grid-cols-3 gap-8 overflow-y-auto " style={{maxHeight: "calc( 100vh - 230px )"}}>
+                    <div className="md:w-5/6 w-full px-4 md:mx-auto md:py-14 grid 2xl:grid-cols-3 gap-8 overflow-y-auto grid-cols-1 lg:grid-cols-2" style={{ maxHeight: "calc( 100vh - 230px )" }}>
                         <ProjectCard />
                         <ProjectCard />
                         <ProjectCard />

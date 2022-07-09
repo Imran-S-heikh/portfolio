@@ -13,8 +13,8 @@ function Contact() {
     const date = (new Date()).toDateString();
 
     return (
-        <div className="flex-1 text-gray-light flex">
-            <div className="w-80 border-gray-base border-r h-full">
+        <div className="flex-1 text-gray-light flex md:flex-row flex-col">
+            <div className="md:w-80 border-gray-base md:border-r md:h-full">
                 <Accordion defaultOpen>
                     <Accordion.Header
                         label="contacts "
@@ -40,14 +40,14 @@ function Contact() {
             </div>
 
             <div className="flex-1 flex flex-col">
-                <div className="border-gray-base border-b h-10">
+                <div className="border-gray-base border-b h-10 hidden md:block">
                     <div className="flex items-center border-gray-base border-r w-max h-full px-4">
                         <p className="mr-10">contacts</p>
                         <Icon icon="close" className="" />
                     </div>
                 </div>
-                <div className="flex items-stretch flex-1">
-                    <div className="flex-1 border-gray-base border-r flex items-center justify-center">
+                <div className="flex items-stretch flex-1 mx-4">
+                    <div className="flex-1 border-gray-base 2xl:border-r flex items-center justify-center">
                         <div className="w-full max-w-sm space-y-5">
                             <Input onChange={setName} type="text" label="_name" placeholder="Jonathon Davis" />
                             <Input onChange={setEmail} type="email" label="_email" placeholder="your@gmail.com" />
@@ -55,7 +55,7 @@ function Contact() {
                             <Button.Default label="submit-message" className="!mt-8" />
                         </div>
                     </div>
-                    <div className="flex-1 justify-center items-center flex my-6">
+                    <div className="flex-1 justify-center items-center my-6 2xl:flex hidden ml-4">
                         <div className="text-iris-base text-lg font-medium leading-6">
                             {[<p className="space-x-2  ">
                                 <span className="text-orange-base">const</span>

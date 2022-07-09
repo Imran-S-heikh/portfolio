@@ -21,7 +21,7 @@ function App() {
               <Route path="/contact" element={<Contact/>}/>
             </Routes>
 
-          <Footer className="lg:flex hidden" />
+          <Footer className="" />
         </div>
 
       </div>

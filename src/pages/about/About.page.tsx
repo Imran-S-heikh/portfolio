@@ -25,7 +25,7 @@ function GamesSection() {
 
 function PersonalInfo() {
     return (
-        <div className="w-60 border-gray-base border-r flex h-full" >
+        <div className="w-full lg:w-60 border-gray-base lg:border-r flex h-full" >
             <div className="text-gray-light flex-1 overflow-y-auto" style={{ maxHeight: "calc( 100vh - 190px)" }}>
                 <div className="">
                     <div className="">
@@ -144,7 +144,7 @@ function About() {
     return (
         <div className="flex-1 flex">
 
-            <div className="w-20 border-r border-gray-base text-center" >
+            <div className="w-20 border-r border-gray-base text-center hidden lg:block" >
                 {aboutNavData.map(item => (
                     <NavItem
                         path={item.path}

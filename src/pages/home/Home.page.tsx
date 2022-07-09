@@ -43,11 +43,11 @@ function Home() {
 
                             <p className="space-x-2 mt-2 font-medium ">
                                 <span className="text-iris-base inline-block">const</span>
-                                <a className="text-green-light inline-block" href="https://github/Imran-S-heikh">
+                                <a className="text-green-light inline-block" href="https://github.com/Imran-S-heikh">
                                     githubLink
                                 </a>
                                 <span className="text-white-base inline-block">=</span>
-                                <a className="text-orange-base" href="https://github/Imran-S-heikh">
+                                <a className="text-orange-base" href="https://github.com/Imran-S-heikh">
                                     "https://github/Imran-S-heikh"
                                     <span className="text-iris-base">;</span>
                                 </a>
