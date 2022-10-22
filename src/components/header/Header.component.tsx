@@ -15,7 +15,7 @@ function Header() {
 
   useEffect(() => {
     setNavBarOpen(window.innerWidth > 1022);
-  }, [location]);
+  }, [location,setNavBarOpen]);
 
 
   return (
