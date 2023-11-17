@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?ce52040e254e569019705779367ac369#iefix") format("embedded-opentype"),
-url("./icons.woff2?ce52040e254e569019705779367ac369") format("woff2"),
-url("./icons.woff?ce52040e254e569019705779367ac369") format("woff");
+    src: url("./icons.eot?c6b244515df4488ce844b3db3b739b60#iefix") format("embedded-opentype"),
+url("./icons.woff2?c6b244515df4488ce844b3db3b739b60") format("woff2"),
+url("./icons.woff?c6b244515df4488ce844b3db3b739b60") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -28,66 +28,69 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-arrow-up:before {
     content: "\f104";
 }
-.icon-caret-up:before {
+.icon-caret-down:before {
     content: "\f105";
 }
-.icon-chevron-right-ii:before {
+.icon-caret-up:before {
     content: "\f106";
 }
-.icon-chevron-right:before {
+.icon-chevron-right-ii:before {
     content: "\f107";
 }
-.icon-close:before {
+.icon-chevron-right:before {
     content: "\f108";
 }
-.icon-cv:before {
+.icon-close:before {
     content: "\f109";
 }
-.icon-done:before {
+.icon-cv:before {
     content: "\f10a";
 }
-.icon-figma:before {
+.icon-done:before {
     content: "\f10b";
 }
-.icon-file-ii:before {
+.icon-figma:before {
     content: "\f10c";
 }
-.icon-file:before {
+.icon-file-ii:before {
     content: "\f10d";
 }
-.icon-folder:before {
+.icon-file:before {
     content: "\f10e";
 }
-.icon-game:before {
+.icon-folder:before {
     content: "\f10f";
 }
-.icon-github:before {
+.icon-game:before {
     content: "\f110";
 }
-.icon-info:before {
+.icon-github:before {
     content: "\f111";
 }
-.icon-linkedin:before {
+.icon-info:before {
     content: "\f112";
 }
-.icon-mail:before {
+.icon-linkedin:before {
     content: "\f113";
 }
-.icon-menu:before {
+.icon-mail:before {
     content: "\f114";
 }
-.icon-phone:before {
+.icon-menu:before {
     content: "\f115";
 }
-.icon-telegram:before {
+.icon-phone:before {
     content: "\f116";
 }
-.icon-terminal:before {
+.icon-telegram:before {
     content: "\f117";
 }
-.icon-twitter:before {
+.icon-terminal:before {
     content: "\f118";
 }
-.icon-whatsapp:before {
+.icon-twitter:before {
     content: "\f119";
+}
+.icon-whatsapp:before {
+    content: "\f11a";
 }
