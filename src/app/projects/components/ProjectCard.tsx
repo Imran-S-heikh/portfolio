@@ -40,10 +40,14 @@ function ProjectCard({ project }: { project: Repository }) {
         {project?.description || "No description provided."}
       </p>
       <div className="mt-3 grid grid-flow-col gap-3">
-        <Link href={project.homepageUrl || "#"} className="block w-full">
+        <Link
+          href={project.homepageUrl || "#"}
+          target="_blank"
+          className="block w-full"
+        >
           <Button.Default className="w-full" label="view-project" />
         </Link>
-        <Link href={project.url} className="block w-full">
+        <Link href={project.url} target="_blank" className="block w-full">
           <Button.Default className="w-full" label="check-in-github" />
         </Link>
       </div>

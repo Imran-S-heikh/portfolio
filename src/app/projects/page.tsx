@@ -2,20 +2,56 @@ import Accordion, {
   AccordionBody,
   AccordionHeader,
 } from "@dev/components/Accordion";
-import Button from "@dev/components/Buttons";
 import { catagories } from "./data";
-import Checkbox from "@dev/components/Checkbox";
 import Icon from "@dev/components/Icon";
 import ProjectCard from "./components/ProjectCard";
 import { getGithubProjects } from "@dev/utils/projects";
+import FilterItem from "./components/FilterItem";
+import { PageProps } from "@dev/utils/types";
 
-async function getData() {
+async function getData(language: string[], topic: string[]) {
   const projects = await getGithubProjects();
-  return projects;
+  const filtered = [];
+
+  if (!language.length && !topic.length) {
+    return projects;
+  }
+
+  for (let project of projects) {
+    const projectLanguages = project.languages.nodes.map((item) =>
+      item.name.toLowerCase()
+    );
+    const projectTopics = project.repositoryTopics.nodes.map((item) =>
+      item.topic.name.toLowerCase()
+    );
+
+    if (
+      language.some((item) => projectLanguages.includes(item)) ||
+      topic.some((item) => projectTopics.includes(item))
+    ) {
+      filtered.push(project);
+    }
+  }
+
+  return filtered;
 }
 
-async function Projects() {
-  const projects = await getData();
+function toArr(args?: string | string[]) {
+  if (!args) {
+    return [];
+  }
+
+  return typeof args === "string"
+    ? [args.toLowerCase()]
+    : args.map((item) => item.toLowerCase());
+}
+
+async function Projects({
+  searchParams,
+}: PageProps<{}, { language?: string[] | string; topic?: string[] | string }>) {
+  const language = toArr(searchParams.language);
+  const topic = toArr(searchParams.topic);
+  const projects = await getData(language, topic);
   return (
     <main className="flex-1 h-full">
       <div className="flex-1 flex text-gray-light md:flex-row flex-col h-full">
@@ -26,12 +62,16 @@ async function Projects() {
               className="h-10 border-b pl-5 border-gray-base"
               icon="arrow-right"
             />
+            
             <AccordionBody className="pl-5 grid gap-5 mt-5">
               {catagories.map((item) => (
-                <div key={item.name} className="flex items-center space-x-4">
-                  <Checkbox />
-                  <p> {item.name} </p>
-                </div>
+                <FilterItem
+                  params={{ language, topic }}
+                  type={item.type}
+                  slug={item.slug}
+                  key={item.name}
+                  name={item.name}
+                />
               ))}
             </AccordionBody>
           </Accordion>

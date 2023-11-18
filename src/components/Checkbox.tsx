@@ -1,16 +1,21 @@
 "use client";
 
 import classUtil from "@dev/utils/class-util";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import Icon from "./Icon";
 
 type Props = {
-  defaultChecked?: boolean;
+  checked?: boolean;
   className?: string;
+  onChange?: (checked: boolean) => void;
 };
 
-function Checkbox({ defaultChecked, className }: Props) {
-  const [checked, setChecked] = useState(Boolean(defaultChecked));
+function Checkbox({ checked, className, onChange }: Props) {
+  // const [checked, setChecked] = useState(Boolean(defaultChecked));
+
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    onChange?.(event.target.checked);
+  }
 
   return (
     <div
@@ -21,7 +26,7 @@ function Checkbox({ defaultChecked, className }: Props) {
       )}
     >
       <input
-        onChange={(event) => setChecked(event.target.checked)}
+        onChange={handleChange}
         checked={checked}
         type="checkbox"
         className={classUtil("w-full h-full absolute opacity-0 cursor-pointer")}
@@ -29,7 +34,7 @@ function Checkbox({ defaultChecked, className }: Props) {
       <Icon
         icon="done"
         className={classUtil(
-          "text-white-base text-sm -mt-1 pointer-events-none transition-colors duration-150 ",
+          "text-white-base text-xs pointer-events-none transition-colors duration-150 ",
           !checked && "opacity-0"
         )}
       />
