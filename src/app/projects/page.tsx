@@ -1,37 +1,24 @@
-import Accordion, { AccordionBody, AccordionHeader } from "@dev/components/Accordion";
+import Accordion, {
+  AccordionBody,
+  AccordionHeader,
+} from "@dev/components/Accordion";
 import Button from "@dev/components/Buttons";
 import { catagories } from "./data";
 import Checkbox from "@dev/components/Checkbox";
 import Icon from "@dev/components/Icon";
+import ProjectCard from "./components/ProjectCard";
+import { getGithubProjects } from "@dev/utils/projects";
 
-function ProjectCard() {
-  return (
-    <div className="border bg-blue-dark border-gray-base p-4 rounded shadow-lg">
-      <div className="flex items-center justify-between">
-        <p className="text-iris-base font-semibold">Project 1</p>
-        <p className="text-sm text-gray-deep font-semibold">134 commits</p>
-      </div>
-      <div className="bg-black-base p-3 mt-3 text-sm rounded">
-        {"/**"} <br />
-        {"*"} hello <br />
-        {"*"} world <br />
-        {"*/"}
-      </div>
-      <div className="mt-4">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus.
-      </div>
-      <div className="mt-3 grid grid-flow-col gap-3">
-        <Button.Default className="" label="view-project" />
-        <Button.Default className="" label="check-in-github" />
-      </div>
-    </div>
-  );
+async function getData() {
+  const projects = await getGithubProjects();
+  return projects;
 }
 
-function Projects() {
+async function Projects() {
+  const projects = await getData();
   return (
-    <main>
-      <div className="flex-1 flex text-gray-light md:flex-row flex-col">
+    <main className="flex-1 h-full">
+      <div className="flex-1 flex text-gray-light md:flex-row flex-col h-full">
         <div className="w-full md:w-80 border-gray-base border-r md:pb-0 pb-6">
           <Accordion defaultOpen>
             <AccordionHeader
@@ -63,12 +50,9 @@ function Projects() {
               className="md:w-5/6 w-full px-4 md:mx-auto md:py-14 grid 2xl:grid-cols-3 gap-8 overflow-y-auto grid-cols-1 lg:grid-cols-2"
               style={{ maxHeight: "calc( 100vh - 230px )" }}
             >
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              {projects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
             </div>
           </div>
         </div>
