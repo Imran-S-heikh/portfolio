@@ -13,14 +13,17 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "next": "14.0.3",
+    "nodemailer": "^6.9.7",
     "octokit": "^3.1.2",
     "react": "^18",
     "react-dom": "^18",
     "react-popper": "^2.3.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.14",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",

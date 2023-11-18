@@ -1,0 +1,16 @@
+@keyframes spinner-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.animate-spinner-linear-spin {
+  animation: spinner-spin 0.8s linear infinite;
+}
+
+.animate-spinner-ease-spin {
+  animation: spinner-spin 0.8s ease infinite;
+}

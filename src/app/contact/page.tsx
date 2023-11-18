@@ -6,11 +6,15 @@ import Icon from "@dev/components/Icon";
 import Input from "@dev/components/Input";
 import Textarea from "@dev/components/Textarea";
 import React, { useState } from "react";
+import Submit from "./components/Submit";
+import { useFormState } from "react-dom";
+import { sendMessage } from "@dev/actions/sendMessage";
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const date = new Date().toDateString();
+  const [_, formAction] = useFormState(sendMessage as any, {});
 
   return (
     <div className="flex-1 text-gray-light flex md:flex-row flex-col">
@@ -49,24 +53,30 @@ function Contact() {
         <div className="flex items-stretch flex-1 mx-4">
           <div className="flex-1 border-gray-base 2xl:border-r flex items-center justify-center">
             <div className="w-full max-w-sm space-y-5">
-              <Input
-                onChange={setName}
-                type="text"
-                label="_name"
-                placeholder="Jonathon Davis"
-              />
-              <Input
-                onChange={setEmail}
-                type="email"
-                label="_email"
-                placeholder="your@gmail.com"
-              />
-              <Textarea
-                onChange={setMessage}
-                label="_message"
-                placeholder="message..."
-              />
-              <Button.Default label="submit-message" className="!mt-8" />
+              <form action={formAction}>
+                <Input
+                  name="name"
+                  onChange={setName}
+                  type="text"
+                  label="_name"
+                  placeholder="Jonathon Davis"
+                />
+                <Input
+                  name="email"
+                  onChange={setEmail}
+                  type="email"
+                  label="_email"
+                  placeholder="your@gmail.com"
+                />
+                <Textarea
+                  name="message"
+                  onChange={setMessage}
+                  label="_message"
+                  placeholder="message..."
+                />
+
+                <Submit />
+              </form>
             </div>
           </div>
           <div className="flex-1 justify-center items-center my-6 2xl:flex hidden ml-4">
