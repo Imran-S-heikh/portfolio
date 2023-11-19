@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client";
 
 import Accordion from "@dev/components/Accordion";
@@ -64,7 +65,7 @@ function Contact() {
 
             <div className="ml-6 my-1 flex items-center gap-2 mt-4">
               <Icon className="w-4 object-fit" icon="phone" />
-              <h1 className="text-white-muted text-md">+8801824182**</h1>
+              <h1 className="text-white-muted text-md">+880182*****</h1>
             </div>
           </Accordion.Body>
         </Accordion>

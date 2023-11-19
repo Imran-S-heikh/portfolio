@@ -47,9 +47,9 @@ function Home() {
                   icon="chevron-right"
                   className="text-iris-base sm:text-2xl"
                 />
-                <p className="text-iris-base sm:text-3xl font-medium text-[5vw] ml-1">
+                <h2 className="text-iris-base sm:text-3xl font-medium text-[5vw] ml-1">
                   Full Stack Web Developer
-                </p>
+                </h2>
               </div>
             </div>
             <div className="">
@@ -71,7 +71,7 @@ function Home() {
                   className="text-orange-base"
                   href="https://github.com/Imran-S-heikh"
                 >
-                  "https://github/Imran-S-heikh"
+                  &quot;https://github/Imran-S-heikh&quot;
                   <span className="text-iris-base">;</span>
                 </a>
               </p>
