@@ -2,7 +2,7 @@ import CommentText from "@dev/components/CommentText";
 
 function PersonalInfo() {
   return (
-    <div className="mt-5 ml-10">
+    <div className="mt-5 ml-2 sm:ml-10">
       <CommentText
         className="text-gray-light text-lg leading-7"
         withNumber

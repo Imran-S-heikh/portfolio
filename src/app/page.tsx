@@ -1,12 +1,8 @@
 import classUtil from "@dev/utils/class-util";
 import { IconsId } from "@dev/assets/font-icons/icons";
-// import { IconsId } from "../../assets/font-icons/icons";
-// import Icon from "../../molecules/Icon.mole"
-// import SnakeFood from '../../assets/svg/snake-food.svg';
-// import style from "./page.module.scss";
 import Icon from "@dev/components/Icon";
 import Button from "@dev/components/Buttons";
-// import Button from "../../molecules/Buttons.mole";
+import SnakeFood from "@dev/components/SnakeFood";
 
 function CloseBtn({ className }: { className?: string }) {
   return (
@@ -24,7 +20,12 @@ function ControlBtn({
   className?: string;
 }) {
   return (
-    <button className={classUtil("bg-black-base rounded-lg", className)}>
+    <button
+      className={classUtil(
+        "bg-black-base rounded-lg grid place-items-center",
+        className
+      )}
+    >
       <Icon className="text-white-light text-3xl" icon={icon} />
     </button>
   );
@@ -54,7 +55,7 @@ function Home() {
             <div className="">
               {/* <p className="text-gray-light font-medium">{'//'} complete the game to continue</p> */}
               <p className="text-gray-light font-medium">
-                {"//"} find my prodile on GitHub
+                {"//"} find my profile on GitHub
               </p>
 
               <p className="space-x-2 mt-2 font-medium ">
@@ -90,6 +91,9 @@ function Home() {
               <CloseBtn className="absolute bottom-2 right-2" />
 
               <div className="bg-blue-base/80 col-span-4 rounded-lg shadow-inset-sm relative">
+                <h4 className="absolute bottom-10 opacity-60 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  Soon!
+                </h4>
                 <Button.Primary
                   label="start-game"
                   className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
@@ -117,16 +121,16 @@ function Home() {
                   <div className="mt-5 ml-3">
                     <p className="text-white-base text-sm">{"//"} food left</p>
                     <div className="grid grid-cols-5 gap-1 w-max mt-2">
-                      {/* <SnakeFood />
-                                            <SnakeFood />
-                                            <SnakeFood />
-                                            <SnakeFood />
-                                            <SnakeFood />
-                                            <SnakeFood />
-                                            <SnakeFood />
-                                            <SnakeFood className="opacity-50" />
-                                            <SnakeFood className="opacity-50" />
-                                            <SnakeFood className="opacity-50" /> */}
+                      <SnakeFood />
+                      <SnakeFood />
+                      <SnakeFood />
+                      <SnakeFood />
+                      <SnakeFood />
+                      <SnakeFood />
+                      <SnakeFood />
+                      <SnakeFood className="opacity-50" />
+                      <SnakeFood className="opacity-50" />
+                      <SnakeFood className="opacity-50" />
                     </div>
                   </div>
                 </div>

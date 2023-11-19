@@ -9,7 +9,7 @@ import { ReactElement } from "react";
 
 function Layout({ children }: { children: ReactElement }) {
   return (
-    <main className=" h-full flex">
+    <main className=" h-full flex lg:flex-row flex-col items-center lg:items-start">
       <div className="w-full lg:w-60 border-gray-base lg:border-r flex h-full">
         <div
           className="text-gray-light flex-1 overflow-y-auto"
@@ -108,7 +108,7 @@ function Layout({ children }: { children: ReactElement }) {
 
                   <div className="ml-6 my-1 flex items-center gap-2">
                     <Icon className="w-4 object-fit" icon="phone" />
-                    <h1 className="text-white-muted text-md">+8801824182**</h1>
+                    <h1 className="text-white-muted text-md">+880182******</h1>
                   </div>
                 </AccordionBody>
               </Accordion>
@@ -117,7 +117,7 @@ function Layout({ children }: { children: ReactElement }) {
         </div>
       </div>
 
-      <div className="">{children}</div>
+      <div className="py-6">{children}</div>
     </main>
   );
 }

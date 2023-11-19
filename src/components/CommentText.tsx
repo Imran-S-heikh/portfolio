@@ -17,15 +17,15 @@ function NumberItem({
 }) {
   return (
     <Hide open={isEnabled}>
-      <span className="w-5 inline-block text-right">{index}</span>
-      <span className="w-8 inline-block"></span>
+      <span className="w-5 md:inline-block text-right hidden">{index}</span>
+      <span className="w-8 md:inline-block hidden"></span>
     </Hide>
   );
 }
 
 function CommentText({ text, className, withNumber }: Props) {
   return (
-    <div className={classUtil(className)}>
+    <div className={classUtil(className,"grid gap-4 md:block")}>
       <p>
         <NumberItem isEnabled={!!withNumber} index={0} />
         <span>{"/**"}</span>

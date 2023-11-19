@@ -24,10 +24,10 @@ function Header() {
         >
           <p className="text-gray-light  lg:pl-5">imran-shaikh</p>
         </Link>
-        <div className="flex-1 flex flex-col lg:block lg:static absolute bg-blue-base inset-0 z-10 lg:z-auto">
+        <MobileNav>
           <Navigation />
           <Footer className="mt-auto lg:hidden" />
-        </div>
+        </MobileNav>
       </div>
     </header>
   );

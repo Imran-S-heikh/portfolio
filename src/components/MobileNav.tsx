@@ -1,16 +1,20 @@
 "use client";
 
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, use, useEffect, useState } from "react";
 import Footer from "./Footer";
 import Hide from "./Hide";
 import Icon from "./Icon";
 import Navigation from "./Navigation";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-function MobileNav() {
+function MobileNav({ children }: { children: React.ReactNode }) {
   const [navBarOpen, setNavBarOpen] = useState(true);
+  const pathname = usePathname();
+
   useEffect(() => {
     setNavBarOpen(window.innerWidth > 1022);
-  }, [location, setNavBarOpen]);
+  }, [pathname, setNavBarOpen]);
 
   return (
     <Fragment>
@@ -25,9 +29,12 @@ function MobileNav() {
       <Hide open={navBarOpen}>
         <div className="flex-1 flex flex-col lg:block lg:static absolute bg-blue-base inset-0 z-10 lg:z-auto">
           <div className="flex justify-between px-4 lg:px-0 h-14 items-center border-gray-dark border-b lg:hidden">
-            {/* <Link to="/" className="lg:border-r border-gray-base flex lg:w-80 items-center lg:h-auto h-full">
-                <p className="text-gray-light  lg:pl-5">imran-shaikh</p>
-              </Link> */}
+            <Link
+              href="/"
+              className="lg:border-r border-gray-base flex lg:w-80 items-center lg:h-auto h-full"
+            >
+              <p className="text-gray-light  lg:pl-5">imran-shaikh</p>
+            </Link>
 
             <div className="">
               <button
@@ -38,8 +45,7 @@ function MobileNav() {
               </button>
             </div>
           </div>
-          <Navigation />
-         
+          {children}
         </div>
       </Hide>
     </Fragment>

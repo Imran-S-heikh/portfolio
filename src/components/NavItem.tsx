@@ -13,7 +13,7 @@ interface NavitemProps {
 function Navitem({ title, path, className }: NavitemProps) {
   const pathname = useSelectedLayoutSegment();
   console.log({ pathname, path });
-  const match = pathname === path;
+  const match = (pathname || '/') === path;
 
   return (
     <Link href={`/${path}`} className="block h-full">

@@ -9,8 +9,9 @@ function Submit() {
   return (
     <Button.Default
       loading={status.pending}
+      disabled={status.pending}
       label="submit-message"
-      className="!mt-4"
+      className="!mt-4 mx-auto md:ml-0"
     />
   );
 }

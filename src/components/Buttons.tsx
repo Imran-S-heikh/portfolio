@@ -3,19 +3,22 @@ import Spinner from "./Spinner";
 import Hide from "./Hide";
 
 type Props = {
+  disabled?: boolean;
   label: string;
   className?: string;
   onClick?: () => void;
   loading?: boolean;
 };
 
-function Button({ label, className, onClick, loading }: Props) {
+function Button({ disabled, label, className, onClick, loading }: Props) {
   return (
     <button
+      disabled={disabled}
       onClick={onClick}
       className={classUtil(
         className,
-        "h-9 px-3 rounded-lg text-sm active:opacity-75 flex items-center gap-2"
+        "h-9 px-3 rounded-lg text-sm active:opacity-75 flex items-center gap-2",
+        disabled && "cursor-not-allowed"
       )}
     >
       <span>{label}</span>
@@ -26,9 +29,10 @@ function Button({ label, className, onClick, loading }: Props) {
   );
 }
 
-function Default({ label, className, onClick, loading }: Props) {
+function Default({ label, className, onClick, loading, disabled }: Props) {
   return (
     <Button
+      disabled={disabled}
       loading={loading}
       label={label}
       className={classUtil(
