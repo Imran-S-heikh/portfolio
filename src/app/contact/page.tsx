@@ -9,12 +9,39 @@ import React, { useState } from "react";
 import Submit from "./components/Submit";
 import { useFormState } from "react-dom";
 import { sendMessage } from "@dev/actions/sendMessage";
+import Hide from "@dev/components/Hide";
+
+function SuccessMessage() {
+  return (
+    <div className="text-center flex-1">
+      <h2 className="text-white-base font-medium text-2xl">Thank you! 🤘</h2>
+      <p className="max-w-sm">
+        Your message has been accepted. You will recieve answer really soon!
+      </p>
+    </div>
+  );
+}
+
+function ErrorMessage() {
+  return (
+    <div className="text-center flex-1">
+      <h2 className="text-white-base font-medium text-2xl">Error! ⚠️</h2>
+      <p className="max-w-sm">
+        Oops! Something went wrong while processing your message. Please try
+        again later.
+      </p>
+    </div>
+  );
+}
+
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const date = new Date().toDateString();
-  const [_, formAction] = useFormState(sendMessage as any, {});
+  const [state, formAction] = useFormState(sendMessage as any, {
+    status: "initial" as "initial" | "success" | "error",
+  });
 
   return (
     <div className="flex-1 text-gray-light flex md:flex-row flex-col">
@@ -53,30 +80,38 @@ function Contact() {
         <div className="flex items-stretch flex-1 mx-4">
           <div className="flex-1 border-gray-base 2xl:border-r flex items-center justify-center">
             <div className="w-full max-w-sm space-y-5">
-              <form action={formAction}>
-                <Input
-                  name="name"
-                  onChange={setName}
-                  type="text"
-                  label="_name"
-                  placeholder="Jonathon Davis"
-                />
-                <Input
-                  name="email"
-                  onChange={setEmail}
-                  type="email"
-                  label="_email"
-                  placeholder="your@gmail.com"
-                />
-                <Textarea
-                  name="message"
-                  onChange={setMessage}
-                  label="_message"
-                  placeholder="message..."
-                />
+              <Hide open={state.status === "initial"}>
+                <form action={formAction}>
+                  <Input
+                    name="name"
+                    onChange={setName}
+                    type="text"
+                    label="_name"
+                    placeholder="Jonathon Davis"
+                  />
+                  <Input
+                    name="email"
+                    onChange={setEmail}
+                    type="email"
+                    label="_email"
+                    placeholder="your@gmail.com"
+                  />
+                  <Textarea
+                    name="message"
+                    onChange={setMessage}
+                    label="_message"
+                    placeholder="message..."
+                  />
 
-                <Submit />
-              </form>
+                  <Submit />
+                </form>
+              </Hide>
+              <Hide open={state.status === "success"}>
+                <SuccessMessage />
+              </Hide>
+              <Hide open={state.status === "error"}>
+                <ErrorMessage />
+              </Hide>
             </div>
           </div>
           <div className="flex-1 justify-center items-center my-6 2xl:flex hidden ml-4">

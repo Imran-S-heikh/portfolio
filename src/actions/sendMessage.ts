@@ -10,18 +10,25 @@ const MessageSchema = z.object({
 });
 
 export async function sendMessage(_: any, formData: FormData) {
-  const { name, email, message } = MessageSchema.parse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    message: formData.get("message"),
-  });
+  try {
+    const { name, email, message } = MessageSchema.parse({
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    });
 
-  const result = await sendMail({
-    from: email,
-    subject: `Message from ${name}`,
-    text: message,
-    name,
-  });
+    const result = await sendMail({
+      from: email,
+      subject: `Message from ${name}`,
+      text: message,
+      name,
+    });
 
-  console.log(result);
+    console.log(result);
+
+    return { status: "success" };
+  } catch (error) {
+    console.log(error);
+    return { status: "error" };
+  }
 }
