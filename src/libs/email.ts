@@ -28,6 +28,7 @@ export async function sendMail({ from, name, subject, text }: MailOptions) {
   } as any);
 
   return await new Promise((resolve, reject) => {
+    console.log("Dev Branch");
     transporter.sendMail(
       {
         from: `${name} <onboarding@resend.dev>`,
