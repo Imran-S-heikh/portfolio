@@ -8,10 +8,8 @@ import { NavItemProps } from "../data";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 function NavItem({ path, icon, label }: NavItemProps) {
-  // const pathname =
   const segment = useSelectedLayoutSegment();
   const match = path === segment;
-  console.log({ segment, path });
 
   return (
     <Tooltip label={label}>

@@ -11,7 +11,6 @@ export async function sendMail({ from, name, subject, text }: MailOptions) {
   console.log({
     host: process.env.MAIL_HOST,
     port: process.env.MAIL_PORT,
-    secure: false,
     auth: {
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASS,
@@ -20,7 +19,7 @@ export async function sendMail({ from, name, subject, text }: MailOptions) {
   const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
     port: process.env.MAIL_PORT,
-    secure: false,
+    secure: true,
     auth: {
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASS,

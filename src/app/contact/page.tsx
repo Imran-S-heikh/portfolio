@@ -40,9 +40,11 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const date = new Date().toDateString();
-  const [state, formAction] = useFormState(sendMessage as any, {
+  const [resp, formAction] = useFormState(sendMessage as any, {
     status: "initial" as "initial" | "success" | "error",
   });
+
+  const state = resp || { status: "error" };
 
   return (
     <div className="flex-1 text-gray-light flex md:flex-row flex-col">
