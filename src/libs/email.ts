@@ -27,10 +27,23 @@ export async function sendMail({ from, name, subject, text }: MailOptions) {
     },
   } as any);
 
-  return await transporter.sendMail({
-    from: `${name} <onboarding@resend.dev>`,
-    to: process.env.DEV_MAIL,
-    subject,
-    text: `${text}\n\nFrom: ${from}`,
+  return await new Promise((resolve, reject) => {
+    transporter.sendMail(
+      {
+        from: `${name} <onboarding@resend.dev>`,
+        to: process.env.DEV_MAIL,
+        subject,
+        text: `${text}\n\nFrom: ${from}`,
+      },
+      (err, info) => {
+        if (err) {
+          console.log(err);
+          reject(err);
+        } else {
+          console.log(info);
+          resolve(info);
+        }
+      }
+    );
   });
 }
