@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import OgImage from "./opengraph-image.png";
 import "./globals.scss";
 
 import { Metadata } from "next";
@@ -22,6 +23,24 @@ export const metadata: Metadata = {
   ],
   creator: "Imran Shaikh",
   authors: [{ name: "Imran Shaikh" }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    countryName: "Bangladesh",
+    description:
+      "Explore the digital realm of Imran Shaikh, a passionate Full Stack Web Developer based in Khulna, Bangladesh. Journey through a showcase of innovative projects, crafted with the latest technologies, and experience the seamless fusion of creativity and functionality. Welcome to a world where ideas come to life through code. 🚀💻 #WebDevelopment #TechInnovation #FullStackDeveloper",
+    title: "Imran Shaikh | Full Stack Web Developer Portfolio",
+    alternateLocale: "bn_BD",
+    siteName: "Imran Shaikh",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@Imran_S_haikh",
+    site: "@Imran_S_haikh",
+    title: "Imran Shaikh | Full Stack Web Developer Portfolio",
+    description:
+      "Explore the world of Imran Shaikh, a passionate Full Stack Web Developer from Khulna, Bangladesh. See ideas come to life through cutting-edge tech. Discover innovative projects and the art of seamless web development",
+  },
 };
 
 export default function RootLayout({
