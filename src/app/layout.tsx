@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import OgImage from "./opengraph-image.png";
 import "./globals.scss";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.FRONTEND_URL!),
   title: "Full Stack Developer | Imran Shaikh",
   description:
     "Explore the portfolio of Imran Shaikh, a skilled Full Stack Web Developer. Discover my projects and skills in web development",
@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     title: "Imran Shaikh | Full Stack Web Developer Portfolio",
     alternateLocale: "bn_BD",
     siteName: "Imran Shaikh",
+    images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
