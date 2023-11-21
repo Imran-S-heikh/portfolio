@@ -25,7 +25,7 @@ function NumberItem({
 
 function CommentText({ text, className, withNumber }: Props) {
   return (
-    <div className={classUtil(className,"grid gap-4 md:block")}>
+    <div className={classUtil(className, "grid gap-4 md:block")}>
       <p>
         <NumberItem isEnabled={!!withNumber} index={0} />
         <span>{"/**"}</span>
@@ -33,7 +33,9 @@ function CommentText({ text, className, withNumber }: Props) {
       {text.map((ov, i) => (
         <p key={i}>
           <NumberItem isEnabled={!!withNumber} index={i + 1} />
-          <span className="">&nbsp;* {ov}</span>
+          <span>
+            <span className="hidden sm:inline-block">&nbsp;*</span> {ov}
+          </span>
         </p>
       ))}
       <p>
