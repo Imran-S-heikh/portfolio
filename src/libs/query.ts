@@ -11,6 +11,7 @@ query GetRepositories($repoIds: [ID!]!) {
       homepageUrl
       visibility
       url
+      openGraphImageUrl
     
       repositoryTopics(first:10) {
       	nodes {

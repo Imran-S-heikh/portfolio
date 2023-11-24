@@ -4,11 +4,11 @@ import Link from "next/link";
 
 function ProjectCard({ project }: { project: Repository }) {
   return (
-    <div className="border bg-blue-dark border-gray-base flex flex-col p-4 rounded shadow-lg">
+    <div className="border @container bg-blue-dark border-gray-base flex flex-col p-4 rounded shadow-lg">
       <div className="flex items-center justify-between">
         <p className="text-iris-base font-semibold">{project.name}</p>
         <div className="flex gap-1">
-          <p className="text-sm text-gray-deep font-semibold">
+          <p className="text-sm text-gray-deep font-semibold @[0px]:hidden @[280px]:block">
             {project.defaultBranchRef.target.history.totalCount} commits
           </p>
           <p
@@ -19,13 +19,14 @@ function ProjectCard({ project }: { project: Repository }) {
           </p>
         </div>
       </div>
-      <div className="bg-black-base p-3 mt-3 text-sm rounded">
-        {"/**"} <br />
-        {"*"} hello <br />
-        {"*"} world <br />
-        {"*/"}
+      <div className="">
+        <img
+          src={project.openGraphImageUrl}
+          alt={project.name}
+          className="w-full h-48 object-cover rounded mt-2 border border-white-base/5"
+        />
       </div>
-      <div className="flex flex-wrap gap-1 mt-2 justify-center">
+      <div className="flex flex-wrap gap-1 mt-1 justify-center">
         {/* {project.languages.nodes.map((item) => (
           <p
             key={item.id}
@@ -39,15 +40,15 @@ function ProjectCard({ project }: { project: Repository }) {
       <p className="mt-4 flex-1">
         {project?.description || "No description provided."}
       </p>
-      <div className="mt-3 grid grid-flow-col gap-3">
+      <div className="mt-3 gap-3 flex flex-wrap ">
         <Link
           href={project.homepageUrl || "#"}
           target="_blank"
-          className="block w-full"
+          className="block flex-1 min-w-max"
         >
           <Button.Default className="w-full" label="view-project" />
         </Link>
-        <Link href={project.url} target="_blank" className="block w-full">
+        <Link href={project.url} target="_blank" className="block flex-1 min-w-max">
           <Button.Default className="w-full" label="check-in-github" />
         </Link>
       </div>

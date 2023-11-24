@@ -14,6 +14,7 @@ export interface Repository {
   homepageUrl: string | null;
   visibility: string;
   url: string;
+  openGraphImageUrl: string;
   repositoryTopics: {
     nodes: {
       topic: {

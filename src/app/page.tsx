@@ -3,6 +3,7 @@ import { IconsId } from "@dev/assets/font-icons/icons";
 import Icon from "@dev/components/Icon";
 import Button from "@dev/components/Buttons";
 import SnakeFood from "@dev/components/SnakeFood";
+import Image from "next/image";
 
 function CloseBtn({ className }: { className?: string }) {
   return (
@@ -52,6 +53,7 @@ function Home() {
                 </h2>
               </div>
             </div>
+            {/* <Image src="/api/stats" width={500} height={500} alt="hero" /> */}
             <div className="">
               {/* <p className="text-gray-light font-medium">{'//'} complete the game to continue</p> */}
               <p className="text-gray-light font-medium">

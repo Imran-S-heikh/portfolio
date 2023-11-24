@@ -17,7 +17,7 @@ function Button({ disabled, label, className, onClick, loading }: Props) {
       onClick={onClick}
       className={classUtil(
         className,
-        "h-9 px-3 rounded-lg text-sm active:opacity-75 flex items-center gap-2",
+        "h-9 px-3 rounded-lg text-sm active:opacity-75 text-center justify-center flex items-center gap-2",
         disabled && "cursor-not-allowed"
       )}
     >
@@ -37,7 +37,7 @@ function Default({ label, className, onClick, loading, disabled }: Props) {
       label={label}
       className={classUtil(
         className,
-        "bg-gray-dark text-white-light hover:bg-gray-deep"
+        "bg-gray-dark text-white-light hover:bg-gray-deep text-center"
       )}
       onClick={onClick}
     />
