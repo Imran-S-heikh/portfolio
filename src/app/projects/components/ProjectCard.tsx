@@ -23,10 +23,10 @@ function ProjectCard({ project }: { project: Repository }) {
         <img
           src={project.openGraphImageUrl}
           alt={project.name}
-          className="w-full h-48 object-cover rounded-lg mt-2"
+          className="w-full h-48 object-cover rounded mt-2 border border-white-base/5"
         />
       </div>
-      <div className="flex flex-wrap gap-1 mt-2 justify-center">
+      <div className="flex flex-wrap gap-1 mt-1 justify-center">
         {/* {project.languages.nodes.map((item) => (
           <p
             key={item.id}
