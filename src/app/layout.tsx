@@ -6,8 +6,11 @@ import "./globals.scss";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.FRONTEND_URL!),
-  title: "Full Stack Developer | Imran Shaikh",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_FRONTEND_URL!),
+  title: {
+    default: "Full Stack Web Developer | Imran Shaikh",
+    template: "%s | Imran Shaikh",
+  },
   description:
     "Explore the portfolio of Imran Shaikh, a skilled Full Stack Web Developer. Discover my projects and skills in web development",
   keywords: [

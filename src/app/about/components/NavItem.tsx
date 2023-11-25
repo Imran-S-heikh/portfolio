@@ -5,13 +5,31 @@ import Tooltip from "@dev/components/Tooltip";
 import classUtil from "@dev/utils/class-util";
 import Link from "next/link";
 import { NavItemProps } from "../data";
-import { useSelectedLayoutSegment } from "next/navigation";
+import {
+  useParams,
+  usePathname,
+  useSelectedLayoutSegment,
+} from "next/navigation";
+
+const aboutPaths = ["/about/cv", "/about/terminal", "/about/games"];
+
+function useMatch(path: string) {
+  const pathname = usePathname();
+  const pathFallback = path || "default";
+
+  if ( aboutPaths.includes(pathname)) {
+    return pathname === `/about/${path}`;
+  }
+
+  if (pathname === "/about" && pathFallback === "default") {
+    return true;
+  }
+
+  return pathFallback === "default" && !aboutPaths.includes(pathname) && pathname.includes('/about/');
+}
 
 function NavItem({ path, icon, label }: NavItemProps) {
-  const segment = useSelectedLayoutSegment();
-  const match = path === (segment || '');
-
-
+  const match = useMatch(path);
   return (
     <Tooltip label={label}>
       <Link

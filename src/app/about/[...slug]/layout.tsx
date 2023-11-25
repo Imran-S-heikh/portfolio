@@ -8,6 +8,7 @@ import { File, infoData, skillsData } from "../data";
 import { ReactElement } from "react";
 import Link from "next/link";
 import LinkItem from "./components/LinkItem";
+import Sidebar from "./components/Sidebar";
 
 function Layout({ children }: { children: ReactElement }) {
   return (
@@ -18,98 +19,7 @@ function Layout({ children }: { children: ReactElement }) {
           style={{ maxHeight: "calc( 100vh - 190px)" }}
         >
           <div className="">
-            <div className="">
-              <Accordion defaultOpen>
-                <AccordionHeader
-                  label="info"
-                  icon="arrow-right"
-                  className="h-10 border-b border-gray-base"
-                />
-                <AccordionBody className="my-3">
-                  {infoData.map((item, i) => (
-                    <Accordion key={i} defaultOpen={item.open}>
-                      <AccordionHeader
-                        folder
-                        label={item.name}
-                        folderClass={item.color}
-                      />
-                      <AccordionBody>
-                        {item.children.map((citem, index) => (
-                          <LinkItem
-                            key={`${i}-${index}`}
-                            icon={citem.icon}
-                            name={citem.name}
-                            // TODO: Make Path a required field
-                            path={citem.path || citem.name}
-                          />
-                        ))}
-                      </AccordionBody>
-                    </Accordion>
-                  ))}
-                </AccordionBody>
-              </Accordion>
-
-              <Accordion defaultOpen>
-                <AccordionHeader
-                  label="skills"
-                  icon="arrow-right"
-                  className="h-10 border-y border-gray-base -mt-px"
-                />
-                <AccordionBody className="my-3">
-                  {skillsData.map((item, i) => (
-                    <Accordion key={i} defaultOpen={item.open}>
-                      <AccordionHeader
-                        folder
-                        label={item.name}
-                        folderClass={item.color}
-                      />
-                      <AccordionBody>
-                        {item.children.map((citem, index) => (
-                          <div
-                            key={`${i}-${index}`}
-                            className="ml-6 my-1 flex items-center gap-2"
-                          >
-                            <Image
-                              width={10}
-                              height={10}
-                              className="w-4 object-fit"
-                              src={(citem as File).image}
-                              alt={citem.name}
-                            />
-                            <h1 className="text-white-muted text-md">
-                              {citem.name}
-                            </h1>
-                          </div>
-                        ))}
-                      </AccordionBody>
-                    </Accordion>
-                  ))}
-                </AccordionBody>
-              </Accordion>
-
-              <Accordion defaultOpen>
-                <AccordionHeader
-                  label="contacts "
-                  icon="arrow-right"
-                  className="h-10 border-y border-gray-base -mt-px"
-                />
-                <AccordionBody className="my-3">
-                  <div className="ml-6 my-1 flex items-center gap-2">
-                    <Icon className="w-4 object-fit" icon="mail" />
-                    <h1 className="text-white-muted text-md">
-                      <a href="mailto:imran.shaikh.contact@gmail.com">
-                        contac@gmail.com
-                      </a>
-                    </h1>
-                  </div>
-
-                  <div className="ml-6 my-1 flex items-center gap-2">
-                    <Icon className="w-4 object-fit" icon="phone" />
-                    <h1 className="text-white-muted text-md">+880182******</h1>
-                  </div>
-                </AccordionBody>
-              </Accordion>
-            </div>
+            <Sidebar />
           </div>
         </div>
       </div>

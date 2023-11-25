@@ -8,36 +8,24 @@ type Props = {
   withNumber?: boolean;
 };
 
-function NumberItem({
-  isEnabled,
-  index,
-}: {
-  isEnabled: boolean;
-  index: number;
-}) {
-  return (
-    <Hide open={isEnabled}>
-      <span className="w-5 md:inline-block text-right hidden">{index}</span>
-      <span className="w-8 md:inline-block hidden"></span>
-    </Hide>
-  );
-}
-
 function CommentText({ text, className, withNumber }: Props) {
   return (
     <div className={classUtil(className, "grid gap-4 md:block")}>
       <div className="flex">
         <div className=" overflow-hidden relative w-10 hidden sm:block">
           <div className="grid absolute">
-            {Array.from(Array(100).keys()).map((ov, i) => (
-              <span className=" md:inline-block text-right hidden">{i}</span>
+            {Array.from(Array(text.length * 3).keys()).map((ov, i) => (
+              <span key={i} className=" md:inline-block text-right hidden">
+                {i}
+              </span>
             ))}
           </div>
         </div>
         <div className=" overflow-hidden relative w-10 hidden sm:block">
           <div className="grid absolute">
-            {Array.from(Array(100).keys()).map((ov, i) => (
+            {Array.from(Array(text.length * 3).keys()).map((ov, i) => (
               <span
+                key={i}
                 className={classUtil(
                   "hidden sm:inline-block",
                   !i && "opacity-0"
