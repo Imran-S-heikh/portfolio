@@ -6,11 +6,13 @@ import Icon from "@dev/components/Icon";
 import Image from "next/image";
 import { File, infoData, skillsData } from "../data";
 import { ReactElement } from "react";
+import Link from "next/link";
+import LinkItem from "./components/LinkItem";
 
 function Layout({ children }: { children: ReactElement }) {
   return (
-    <main className=" h-full flex lg:flex-row flex-col items-center lg:items-start">
-      <div className="w-full lg:w-60 border-gray-base lg:border-r flex h-full">
+    <div className=" h-full flex lg:flex-row flex-col items-center lg:items-start">
+      <div className="w-full lg:w-[240px] border-gray-base lg:border-r flex h-full">
         <div
           className="text-gray-light flex-1 overflow-y-auto"
           style={{ maxHeight: "calc( 100vh - 190px)" }}
@@ -19,8 +21,8 @@ function Layout({ children }: { children: ReactElement }) {
             <div className="">
               <Accordion defaultOpen>
                 <AccordionHeader
-                  label="persoanl-info"
-                  // icon="arrow-right"
+                  label="info"
+                  icon="arrow-right"
                   className="h-10 border-b border-gray-base"
                 />
                 <AccordionBody className="my-3">
@@ -33,18 +35,13 @@ function Layout({ children }: { children: ReactElement }) {
                       />
                       <AccordionBody>
                         {item.children.map((citem, index) => (
-                          <div
+                          <LinkItem
                             key={`${i}-${index}`}
-                            className="ml-6 my-1 flex items-center gap-2"
-                          >
-                            <Icon
-                              className="w-4 object-fit"
-                              icon={citem.icon}
-                            />
-                            <h1 className="text-white-muted text-md">
-                              {citem.name.split(" ")[0]}
-                            </h1>
-                          </div>
+                            icon={citem.icon}
+                            name={citem.name}
+                            // TODO: Make Path a required field
+                            path={citem.path || citem.name}
+                          />
                         ))}
                       </AccordionBody>
                     </Accordion>
@@ -80,7 +77,7 @@ function Layout({ children }: { children: ReactElement }) {
                               alt={citem.name}
                             />
                             <h1 className="text-white-muted text-md">
-                              {citem.name.split(" ")[0]}
+                              {citem.name}
                             </h1>
                           </div>
                         ))}
@@ -117,8 +114,8 @@ function Layout({ children }: { children: ReactElement }) {
         </div>
       </div>
 
-      <div className="py-6">{children}</div>
-    </main>
+      <div className="m-10 flex-1">{children}</div>
+    </div>
   );
 }
 

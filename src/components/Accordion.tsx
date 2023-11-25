@@ -80,11 +80,11 @@ interface BodyProps {
 export function AccordionBody({ children, className }: BodyProps) {
   const { open } = useContext(Context);
 
-  if (!open) {
-    return null;
-  }
+  // if (!open) {
+  //   return null;
+  // }
 
-  return <div className={classUtil(className)}>{children}</div>;
+  return <div className={classUtil(className,!open && "hidden")}>{children}</div>;
 }
 
 interface ContextProps {
