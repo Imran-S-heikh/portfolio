@@ -10,7 +10,7 @@ import {
   defaultContent,
   infoData,
   skillsData,
-} from "../../data";
+} from "../../../data";
 import LinkItem from "./LinkItem";
 import Image from "next/image";
 import Icon from "@dev/components/Icon";

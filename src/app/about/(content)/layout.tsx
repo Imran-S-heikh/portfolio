@@ -1,14 +1,5 @@
-import Accordion, {
-  AccordionBody,
-  AccordionHeader,
-} from "@dev/components/Accordion";
-import Icon from "@dev/components/Icon";
-import Image from "next/image";
-import { File, infoData, skillsData } from "../data";
 import { ReactElement } from "react";
-import Link from "next/link";
-import LinkItem from "./components/LinkItem";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./[...slug]/components/Sidebar";
 
 function Layout({ children }: { children: ReactElement }) {
   return (
@@ -24,7 +15,7 @@ function Layout({ children }: { children: ReactElement }) {
         </div>
       </div>
 
-      <div className="m-10 flex-1">{children}</div>
+      <div className="m-4 sm:m-6 xl:m-10 flex-1">{children}</div>
     </div>
   );
 }
