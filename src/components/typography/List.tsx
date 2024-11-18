@@ -11,7 +11,7 @@ export function Ul({ children, className }: UlProps) {
 
 export function Li({ children, className }: UlProps) {
   return (
-    <li className={cn("text-xl ml-[30px] mt-[18px] text-gray-700 leading-relaxed md:text-lg", className)}>{children}</li>
+    <li className={cn("md:text-xl ml-[30px] mt-[18px] text-gray-700 leading-relaxed text-lg", className)}>{children}</li>
   );
 }
 
