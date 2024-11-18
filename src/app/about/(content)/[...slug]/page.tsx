@@ -1,5 +1,5 @@
 import { PageProps } from "@dev/utils/types";
-import { FileIcon, defaultContent, infoData, skillsData } from "../data";
+import { FileIcon, defaultContent, infoData, skillsData } from "../../data";
 import CommentText from "@dev/components/CommentText";
 import { Metadata } from "next";
 
@@ -66,7 +66,6 @@ function Page({ params }: PageProps<{ slug: string[] }>) {
     <div className="">
       <CommentText
         className="text-gray-light text-lg leading-7"
-        withNumber
         text={content}
       />
     </div>
