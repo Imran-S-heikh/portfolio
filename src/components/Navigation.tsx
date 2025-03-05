@@ -13,6 +13,7 @@ function Navigation({ className }: NavigationProps) {
       <ul className="flex leading-4 lg:h-14 lg:flex-row flex-col">
         <Navitem title="_hello" path="/" />
         <Navitem title="_about me" path="about" />
+        <Navitem title="_blog" path="blog" />
         <Navitem title="_projects" path="projects" />
       </ul>
 

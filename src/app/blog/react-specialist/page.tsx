@@ -16,8 +16,15 @@ export const metadata: Metadata = {
     "Imran Shaikh, a React Specialist, delivers scalable and performance-optimized web applications with pixel-perfect designs. Hire a React expert today for your project",
 };
 
+export const preview = {
+  title: "Need a React Specialist? Build Scalable & Pixel-Perfect Apps",
+  description:
+    "Hire Imran Shaikh, a React Specialist, to craft high-performance, pixel-perfect web applications with modern UI and seamless functionality.",
+  image: cover,
+  url: "/blog/react-specialist",
+};
+
 function Page() {
-  cn;
   return (
     <main className="text-gray-light max-w-2xl mx-auto">
       <section className="">
