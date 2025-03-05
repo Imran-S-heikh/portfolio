@@ -1,7 +1,7 @@
 import React from "react";
-import { preview as rectSpecialist } from "./react-specialist/page";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import reactSpecialist from "./react-specialist/preview";
 
 function BlogPreviewCard({
   title,
@@ -35,7 +35,7 @@ function BlogPreviewCard({
 }
 
 function BlogPage() {
-  const posts = [rectSpecialist];
+  const posts = [reactSpecialist];
   return (
     <main className="flex-1">
       <div className="grid grid-cols-4 gap-x-5 gap-y-10 m-5">

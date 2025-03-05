@@ -36,7 +36,9 @@ function getContent(slug?: string): Content {
   };
 }
 
-export async function generateMetadata(props: PageProps<{ slug: string[] }>): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string[] }>;
+}): Promise<Metadata> {
   const params = await props.params;
   const slug = params.slug.at(-1);
   const { content, title } = getContent(slug);
@@ -58,7 +60,7 @@ export async function generateMetadata(props: PageProps<{ slug: string[] }>): Pr
   };
 }
 
-async function Page(props: PageProps<{ slug: string[] }>) {
+async function Page(props: { params: Promise<{ slug: string[] }> }) {
   const params = await props.params;
   const slug = params.slug.at(-1);
   const { content } = getContent(slug);

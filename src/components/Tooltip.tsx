@@ -13,10 +13,15 @@ interface Props {
   children: ReactElement;
   label: string;
   placement?: Placement;
-  arrowIcon?: IconsId ;
+  arrowIcon?: IconsId;
 }
 
-function Tooltip({ children, label, placement, arrowIcon = "caret-up" }: Props) {
+function Tooltip({
+  children,
+  label,
+  placement,
+  arrowIcon = "caret-up",
+}: Props) {
   const [show, setShow] = useState(false);
   const [referenceElement, setReferenceElement] =
     useState<HTMLButtonElement | null>(null);
@@ -35,7 +40,7 @@ function Tooltip({ children, label, placement, arrowIcon = "caret-up" }: Props) 
         onMouseEnter: () => setShow(true),
         onMouseLeave: () => setShow(false),
         ref: setReferenceElement,
-      })}
+      } as any)}
 
       <div
         ref={setPopperElement}
