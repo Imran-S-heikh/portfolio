@@ -46,9 +46,13 @@ function toArr(args?: string | string[]) {
     : args.map((item) => item.toLowerCase());
 }
 
-async function Projects({
-  searchParams,
-}: PageProps<{}, { language?: string[] | string; topic?: string[] | string }>) {
+async function Projects(
+  props: PageProps<
+    {},
+    { language?: string[] | string; topic?: string[] | string }
+  >
+) {
+  const searchParams = await props.searchParams;
   const language = toArr(searchParams.language);
   const topic = toArr(searchParams.topic);
   const projects = await getData(language, topic);
@@ -62,7 +66,7 @@ async function Projects({
               className="h-10 border-b pl-5 border-gray-base"
               icon="arrow-right"
             />
-            
+
             <AccordionBody className="pl-5 grid gap-5 mt-5">
               {catagories.map((item) => (
                 <FilterItem

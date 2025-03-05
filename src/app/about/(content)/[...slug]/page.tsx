@@ -36,9 +36,8 @@ function getContent(slug?: string): Content {
   };
 }
 
-export function generateMetadata({
-  params,
-}: PageProps<{ slug: string[] }>): Metadata {
+export async function generateMetadata(props: PageProps<{ slug: string[] }>): Promise<Metadata> {
+  const params = await props.params;
   const slug = params.slug.at(-1);
   const { content, title } = getContent(slug);
   return {
@@ -59,7 +58,8 @@ export function generateMetadata({
   };
 }
 
-function Page({ params }: PageProps<{ slug: string[] }>) {
+async function Page(props: PageProps<{ slug: string[] }>) {
+  const params = await props.params;
   const slug = params.slug.at(-1);
   const { content } = getContent(slug);
   return (
