@@ -5,12 +5,12 @@ import Accordion, {
 import { catagories } from "./data";
 import Icon from "@dev/components/Icon";
 import ProjectCard from "./components/ProjectCard";
-import { getGithubProjects } from "@dev/utils/projects";
+import { getCachedGithubProjects } from "@dev/utils/projects";
 import FilterItem from "./components/FilterItem";
 import { PageProps } from "@dev/utils/types";
 
 async function getData(language: string[], topic: string[]) {
-  const projects = await getGithubProjects();
+  const projects = await getCachedGithubProjects();
   const filtered = [];
 
   if (!language.length && !topic.length) {
