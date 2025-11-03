@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@Imran_S_haikh",
-    site: "@Imran_S_haikh",
+    creator: "@imrandev",
+    site: "@imrandev",
     title: "Imran Shaikh | Full Stack Web Developer Portfolio",
     description:
       "Explore the world of Imran Shaikh, a passionate Full Stack Web Developer from Khulna, Bangladesh. See ideas come to life through cutting-edge tech. Discover innovative projects and the art of seamless web development",
@@ -54,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html suppressHydrationWarning>
       <head>
         <GoogleAnalytics />
       </head>

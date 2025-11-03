@@ -43,12 +43,12 @@ function Footer({ className }: { className?: string }) {
         <SocialLink icon="github" link="https://github.com/Imran-S-heikh" />
         <SocialLink
           icon="linkedin"
-          link="https://linkedin.com/in/Imran-S-haikh"
+          link="https://linkedin.com/in/itsimrandev"
         />
         <SocialLink
           className="md:border-r  border-r-0"
           icon="twitter"
-          link="https://twitter.com/Imran_S_haikh"
+          link="https://twitter.com/imrandev"
         />
       </div>
 

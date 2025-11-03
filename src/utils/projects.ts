@@ -13,6 +13,7 @@ export async function getGithubProjects() {
   const data = (await octokit.graphql(GET_REPOSITORIES_BY_ID, {
     repoIds: [PORTFOLIO, RETOMIZER, DEVFINDER, UDDOGTA, SIMPLE_TODO],
   })) as { nodes: Repository[] };
+  console.log("GETTING GITHUB PROJECTS");
 
   return data.nodes;
 }
